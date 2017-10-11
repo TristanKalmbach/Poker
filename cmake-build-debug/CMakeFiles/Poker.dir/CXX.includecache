@@ -1,0 +1,42 @@
+#IncludeRegexLine: ^[ 	]*[#%][ 	]*(include|import)[ 	]*[<"]([^">]+)([">])
+
+#IncludeRegexScan: ^.*$
+
+#IncludeRegexComplain: ^$
+
+#IncludeRegexTransform: 
+
+/Users/tristankalmbach/CLionProjects/Poker/Cards/Card.cpp
+Card.hpp
+/Users/tristankalmbach/CLionProjects/Poker/Cards/Card.hpp
+
+/Users/tristankalmbach/CLionProjects/Poker/Cards/Card.hpp
+CardProperties.hpp
+/Users/tristankalmbach/CLionProjects/Poker/Cards/CardProperties.hpp
+
+/Users/tristankalmbach/CLionProjects/Poker/Cards/CardProperties.hpp
+cstdint
+-
+iostream
+-
+vector
+-
+random
+-
+string
+-
+
+/Users/tristankalmbach/CLionProjects/Poker/Cards/Deck.cpp
+Deck.hpp
+/Users/tristankalmbach/CLionProjects/Poker/Cards/Deck.hpp
+
+/Users/tristankalmbach/CLionProjects/Poker/Cards/Deck.hpp
+Card.hpp
+/Users/tristankalmbach/CLionProjects/Poker/Cards/Card.hpp
+
+/Users/tristankalmbach/CLionProjects/Poker/main.cpp
+Cards/Card.hpp
+/Users/tristankalmbach/CLionProjects/Poker/Cards/Card.hpp
+Cards/Deck.hpp
+/Users/tristankalmbach/CLionProjects/Poker/Cards/Deck.hpp
+
