@@ -1,11 +1,14 @@
 #include "Cards/Card.hpp"
 #include "Cards/Deck.hpp"
+#include "Testing/Probabilities.hpp"
 
 int main()
 {
-    std::unique_ptr<Deck> deck(new Deck());
+    Probabilities* pb = new Probabilities();
+    pb->GetProbabilitiesOfHandConditions();
 
-    deck->PrintDeckDetails();
+    //std::unique_ptr<Deck> deck(new Deck());
+    //deck->PrintDeckDetails();
 
     system("pause");
     return 0;

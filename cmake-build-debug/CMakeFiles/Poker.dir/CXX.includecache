@@ -33,10 +33,36 @@ Deck.hpp
 /Users/tristankalmbach/CLionProjects/Poker/Cards/Deck.hpp
 Card.hpp
 /Users/tristankalmbach/CLionProjects/Poker/Cards/Card.hpp
+Hand.hpp
+/Users/tristankalmbach/CLionProjects/Poker/Cards/Hand.hpp
+
+/Users/tristankalmbach/CLionProjects/Poker/Cards/Hand.cpp
+Hand.hpp
+/Users/tristankalmbach/CLionProjects/Poker/Cards/Hand.hpp
+
+/Users/tristankalmbach/CLionProjects/Poker/Cards/Hand.hpp
+Card.hpp
+/Users/tristankalmbach/CLionProjects/Poker/Cards/Card.hpp
+
+/Users/tristankalmbach/CLionProjects/Poker/Game/HandEvaluator.cpp
+HandEvaluator.hpp
+/Users/tristankalmbach/CLionProjects/Poker/Game/HandEvaluator.hpp
+
+/Users/tristankalmbach/CLionProjects/Poker/Game/HandEvaluator.hpp
+../Cards/Hand.hpp
+/Users/tristankalmbach/CLionProjects/Poker/Cards/Hand.hpp
+
+/Users/tristankalmbach/CLionProjects/Poker/Testing/Probabilities.hpp
+../Cards/Deck.hpp
+/Users/tristankalmbach/CLionProjects/Poker/Cards/Deck.hpp
+../Game/HandEvaluator.hpp
+/Users/tristankalmbach/CLionProjects/Poker/Game/HandEvaluator.hpp
 
 /Users/tristankalmbach/CLionProjects/Poker/main.cpp
 Cards/Card.hpp
 /Users/tristankalmbach/CLionProjects/Poker/Cards/Card.hpp
 Cards/Deck.hpp
 /Users/tristankalmbach/CLionProjects/Poker/Cards/Deck.hpp
+Testing/Probabilities.hpp
+/Users/tristankalmbach/CLionProjects/Poker/Testing/Probabilities.hpp
 

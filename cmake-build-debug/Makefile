@@ -177,6 +177,60 @@ Cards/Deck.cpp.s:
 	$(MAKE) -f CMakeFiles/Poker.dir/build.make CMakeFiles/Poker.dir/Cards/Deck.cpp.s
 .PHONY : Cards/Deck.cpp.s
 
+Cards/Hand.o: Cards/Hand.cpp.o
+
+.PHONY : Cards/Hand.o
+
+# target to build an object file
+Cards/Hand.cpp.o:
+	$(MAKE) -f CMakeFiles/Poker.dir/build.make CMakeFiles/Poker.dir/Cards/Hand.cpp.o
+.PHONY : Cards/Hand.cpp.o
+
+Cards/Hand.i: Cards/Hand.cpp.i
+
+.PHONY : Cards/Hand.i
+
+# target to preprocess a source file
+Cards/Hand.cpp.i:
+	$(MAKE) -f CMakeFiles/Poker.dir/build.make CMakeFiles/Poker.dir/Cards/Hand.cpp.i
+.PHONY : Cards/Hand.cpp.i
+
+Cards/Hand.s: Cards/Hand.cpp.s
+
+.PHONY : Cards/Hand.s
+
+# target to generate assembly for a file
+Cards/Hand.cpp.s:
+	$(MAKE) -f CMakeFiles/Poker.dir/build.make CMakeFiles/Poker.dir/Cards/Hand.cpp.s
+.PHONY : Cards/Hand.cpp.s
+
+Game/HandEvaluator.o: Game/HandEvaluator.cpp.o
+
+.PHONY : Game/HandEvaluator.o
+
+# target to build an object file
+Game/HandEvaluator.cpp.o:
+	$(MAKE) -f CMakeFiles/Poker.dir/build.make CMakeFiles/Poker.dir/Game/HandEvaluator.cpp.o
+.PHONY : Game/HandEvaluator.cpp.o
+
+Game/HandEvaluator.i: Game/HandEvaluator.cpp.i
+
+.PHONY : Game/HandEvaluator.i
+
+# target to preprocess a source file
+Game/HandEvaluator.cpp.i:
+	$(MAKE) -f CMakeFiles/Poker.dir/build.make CMakeFiles/Poker.dir/Game/HandEvaluator.cpp.i
+.PHONY : Game/HandEvaluator.cpp.i
+
+Game/HandEvaluator.s: Game/HandEvaluator.cpp.s
+
+.PHONY : Game/HandEvaluator.s
+
+# target to generate assembly for a file
+Game/HandEvaluator.cpp.s:
+	$(MAKE) -f CMakeFiles/Poker.dir/build.make CMakeFiles/Poker.dir/Game/HandEvaluator.cpp.s
+.PHONY : Game/HandEvaluator.cpp.s
+
 main.o: main.cpp.o
 
 .PHONY : main.o
@@ -219,6 +273,12 @@ help:
 	@echo "... Cards/Deck.o"
 	@echo "... Cards/Deck.i"
 	@echo "... Cards/Deck.s"
+	@echo "... Cards/Hand.o"
+	@echo "... Cards/Hand.i"
+	@echo "... Cards/Hand.s"
+	@echo "... Game/HandEvaluator.o"
+	@echo "... Game/HandEvaluator.i"
+	@echo "... Game/HandEvaluator.s"
 	@echo "... main.o"
 	@echo "... main.i"
 	@echo "... main.s"

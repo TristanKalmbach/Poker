@@ -22,73 +22,13 @@ public:
         m_rank = rank;
     }
 
-    CardSuits getSuit() const {
-        return m_suit;
-    }
+    CardSuits getSuit() const { return m_suit; }
+    CardRank getRank() const { return m_rank; }
 
-    void setSuit(CardSuits m_suit) {
-        Card::m_suit = m_suit;
-    }
-
-    CardRank getRank() const {
-        return m_rank;
-    }
-
-    void setRank(CardRank m_value) {
-        Card::m_rank = m_value;
-    }
-
-    std::string GetNameFromRank(CardRank rank) const
-    {
-        switch (rank)
-        {
-            case CardRank::Ace:
-                return "Ace";
-            case CardRank::Two:
-                return "Two";
-            case CardRank::Three:
-                return "Three";
-            case CardRank::Four:
-                return "Four";
-            case CardRank::Five:
-                return "Five";
-            case CardRank::Six:
-                return "Six";
-            case CardRank::Seven:
-                return "Seven";
-            case CardRank::Eight:
-                return "Eight";
-            case CardRank::Nine:
-                return "Nine";
-            case CardRank::Ten:
-                return "Ten";
-            case CardRank::Jack:
-                return "Jack";
-            case CardRank::Queen:
-                return "Queen";
-            case CardRank::King:
-                return "King";
-            default:
-                return "Error";
-        }
-    }
-
-    std::string GetNameFromSuit(CardSuits suit) const
-    {
-        switch (suit)
-        {
-            case CardSuits::Club:
-                return "Clubs";
-            case CardSuits::Diamond:
-                return "Diamonds";
-            case CardSuits::Heart:
-                return "Hearts";
-            case CardSuits::Spade:
-                return "Spades";
-            default:
-                return "Error";
-        }
-    }
+    std::string GetNameFromRank() const;
+    std::string GetNameFromSuit() const;
+    bool IsCardRoyal() const;
+    int GetNumericalValueFromRank() const;
 
     // Debugging & Test methods
     void PrintCardDetails() const;

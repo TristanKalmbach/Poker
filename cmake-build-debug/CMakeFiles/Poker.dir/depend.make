@@ -9,9 +9,24 @@ CMakeFiles/Poker.dir/Cards/Deck.cpp.o: ../Cards/Card.hpp
 CMakeFiles/Poker.dir/Cards/Deck.cpp.o: ../Cards/CardProperties.hpp
 CMakeFiles/Poker.dir/Cards/Deck.cpp.o: ../Cards/Deck.cpp
 CMakeFiles/Poker.dir/Cards/Deck.cpp.o: ../Cards/Deck.hpp
+CMakeFiles/Poker.dir/Cards/Deck.cpp.o: ../Cards/Hand.hpp
+
+CMakeFiles/Poker.dir/Cards/Hand.cpp.o: ../Cards/Card.hpp
+CMakeFiles/Poker.dir/Cards/Hand.cpp.o: ../Cards/CardProperties.hpp
+CMakeFiles/Poker.dir/Cards/Hand.cpp.o: ../Cards/Hand.cpp
+CMakeFiles/Poker.dir/Cards/Hand.cpp.o: ../Cards/Hand.hpp
+
+CMakeFiles/Poker.dir/Game/HandEvaluator.cpp.o: ../Cards/Card.hpp
+CMakeFiles/Poker.dir/Game/HandEvaluator.cpp.o: ../Cards/CardProperties.hpp
+CMakeFiles/Poker.dir/Game/HandEvaluator.cpp.o: ../Cards/Hand.hpp
+CMakeFiles/Poker.dir/Game/HandEvaluator.cpp.o: ../Game/HandEvaluator.cpp
+CMakeFiles/Poker.dir/Game/HandEvaluator.cpp.o: ../Game/HandEvaluator.hpp
 
 CMakeFiles/Poker.dir/main.cpp.o: ../Cards/Card.hpp
 CMakeFiles/Poker.dir/main.cpp.o: ../Cards/CardProperties.hpp
 CMakeFiles/Poker.dir/main.cpp.o: ../Cards/Deck.hpp
+CMakeFiles/Poker.dir/main.cpp.o: ../Cards/Hand.hpp
+CMakeFiles/Poker.dir/main.cpp.o: ../Game/HandEvaluator.hpp
+CMakeFiles/Poker.dir/main.cpp.o: ../Testing/Probabilities.hpp
 CMakeFiles/Poker.dir/main.cpp.o: ../main.cpp
 

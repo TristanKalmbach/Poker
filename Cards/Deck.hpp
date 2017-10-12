@@ -5,20 +5,23 @@
 #pragma once
 
 #include "Card.hpp"
+#include "Hand.hpp"
 
-#define NUM_DECKS 4
+// Setting to increase number of decks used in the game. Default is 1.
+#define NUM_DECKS 1
 
-class Deck {
+class Deck
+{
 
 public:
     Deck();
-    ~Deck()
-    {
-        m_deck.clear();
-    }
+    ~Deck() { m_deck.clear(); }
 
+    // Main methods
     void FillDeck();
     void ShuffleDeck();
+    std::shared_ptr<Hand> CreateHand();
+    Card GetRandomCardFromDeck();
 
     // Debugging & Testing methods
     void PrintDeckDetails();

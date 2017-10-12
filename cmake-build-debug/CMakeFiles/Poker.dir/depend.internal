@@ -10,8 +10,23 @@ CMakeFiles/Poker.dir/Cards/Deck.cpp.o
  /Users/tristankalmbach/CLionProjects/Poker/Cards/CardProperties.hpp
  /Users/tristankalmbach/CLionProjects/Poker/Cards/Deck.cpp
  /Users/tristankalmbach/CLionProjects/Poker/Cards/Deck.hpp
+ /Users/tristankalmbach/CLionProjects/Poker/Cards/Hand.hpp
+CMakeFiles/Poker.dir/Cards/Hand.cpp.o
+ /Users/tristankalmbach/CLionProjects/Poker/Cards/Card.hpp
+ /Users/tristankalmbach/CLionProjects/Poker/Cards/CardProperties.hpp
+ /Users/tristankalmbach/CLionProjects/Poker/Cards/Hand.cpp
+ /Users/tristankalmbach/CLionProjects/Poker/Cards/Hand.hpp
+CMakeFiles/Poker.dir/Game/HandEvaluator.cpp.o
+ /Users/tristankalmbach/CLionProjects/Poker/Cards/Card.hpp
+ /Users/tristankalmbach/CLionProjects/Poker/Cards/CardProperties.hpp
+ /Users/tristankalmbach/CLionProjects/Poker/Cards/Hand.hpp
+ /Users/tristankalmbach/CLionProjects/Poker/Game/HandEvaluator.cpp
+ /Users/tristankalmbach/CLionProjects/Poker/Game/HandEvaluator.hpp
 CMakeFiles/Poker.dir/main.cpp.o
  /Users/tristankalmbach/CLionProjects/Poker/Cards/Card.hpp
  /Users/tristankalmbach/CLionProjects/Poker/Cards/CardProperties.hpp
  /Users/tristankalmbach/CLionProjects/Poker/Cards/Deck.hpp
+ /Users/tristankalmbach/CLionProjects/Poker/Cards/Hand.hpp
+ /Users/tristankalmbach/CLionProjects/Poker/Game/HandEvaluator.hpp
+ /Users/tristankalmbach/CLionProjects/Poker/Testing/Probabilities.hpp
  /Users/tristankalmbach/CLionProjects/Poker/main.cpp
