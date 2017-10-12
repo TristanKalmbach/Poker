@@ -11,7 +11,7 @@ void Deck::FillDeck()
         for (auto const &s : Suits)
             for (auto const &r : Ranks)
             {
-                Card card(s, r);
+	            const Card card(s, r);
                 m_deck.push_back(card);
             }
 
@@ -42,14 +42,14 @@ void Deck::PrintDeckDetails()
 }
 
 // Add 5 cards to hand and return a pointer to it.
-std::shared_ptr<Hand> Deck::CreateHand()
+Hand Deck::CreateHand()
 {
-    std::shared_ptr<Hand> hand(new Hand());
+	std::list<Card> hand;
     for (int i = 0; i < HAND_SIZE; ++i)
     {
         // Get a random card from the deck
-        Card card = GetRandomCardFromDeck();
-        hand->AddCardToHand(card);
+	    const Card card = GetRandomCardFromDeck();
+		hand.emplace_back(card);
     }
 
     return hand;
@@ -62,12 +62,12 @@ Card Deck::GetRandomCardFromDeck()
     auto GetRandom = [](auto vec)
     {
         std::vector<Card> out;
-        std::sample(vec.begin(), vec.end(), std::back_inserter(out), 3, std::mt19937{std::random_device{}()});
+        std::sample(vec.begin(), vec.end(), std::back_inserter(out), 1, std::mt19937{std::random_device{}()});
         return out.front();
     };
 
     // Assign whatever random card we just got to a card object.
-    auto card = GetRandom(m_deck);
+	auto &card = GetRandom(m_deck);
 
     return card;
 }

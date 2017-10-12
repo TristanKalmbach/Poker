@@ -4,7 +4,7 @@
 
 #pragma once
 
-#include "../Cards/Hand.hpp"
+#include "../Cards/Deck.hpp"
 
 class HandEvaluator
 {
@@ -16,8 +16,9 @@ public:
     static bool HasThreeOfKind(Hand const &hand);
     static bool HasTwoPair(Hand const &hand);
     static bool HasFourOfKind(Hand const &hand);
-    static bool IsStraightFlush(Hand const &hand);
+    static bool HasStraightFlush(Hand const &hand);
     static bool IsFullHouse(Hand const &hand);
+	static bool IsEveryCardRoyal(Hand const &hand);
 
 private:
     HandEvaluator();

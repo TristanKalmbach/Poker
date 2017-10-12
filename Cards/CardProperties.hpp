@@ -9,6 +9,10 @@
 #include <vector>
 #include <random>
 #include <string>
+#include <memory>
+#include <algorithm>
+#include <iomanip>
+#include <list>
 
 enum class CardSuits : std::uint8_t {
     Club,

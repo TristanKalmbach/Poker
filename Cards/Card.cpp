@@ -10,6 +10,14 @@ void Card::PrintCardDetails() const
     std::cout << out << "\n";
 }
 
+std::pair<int, int> Card::GetCardAsIntPair() const
+{
+	int suit = GetNumericalValueFromSuit();
+	int rank = GetNumericalValueFromRank();
+
+	return std::make_pair(suit, rank);
+}
+
 std::string Card::GetNameFromRank() const
 {
     switch (getRank())
@@ -110,4 +118,21 @@ int Card::GetNumericalValueFromRank() const
         default:
             return 0;
     }
+}
+
+int Card::GetNumericalValueFromSuit() const
+{
+	switch (getSuit())
+	{
+	case CardSuits::Club:
+		return 1;
+	case CardSuits::Diamond:
+		return 2;
+	case CardSuits::Heart:
+		return 3;
+	case CardSuits::Spade:
+		return 4;
+	default:
+		return 0;
+	}
 }
