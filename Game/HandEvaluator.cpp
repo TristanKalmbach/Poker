@@ -7,13 +7,9 @@
 bool HandEvaluator::HasFlush(Hand const &hand)
 {
 	// Create a vector for easy access
-	std::vector<Card> cards;
-	cards.reserve(hand.size());
-	std::copy(std::begin(hand), std::end(hand), std::back_inserter(cards));
-
 	for (int i = 0; i < HAND_SIZE; ++i)
 	{
-		if (cards[i].getSuit() != cards[0].getSuit())
+		if (hand[i].getSuit() != hand[0].getSuit())
 			return false;
 	}
 
@@ -39,17 +35,12 @@ bool HandEvaluator::HasRoyalFlush(Hand const &hand)
 
 bool HandEvaluator::HasStraight(Hand const &hand)
 {
-	// Create a vector for easy access
-	std::vector<Card> cards;
-	cards.reserve(hand.size());
-	std::copy(std::begin(hand), std::end(hand), std::back_inserter(cards));
-
 	// Check cards
-	auto cardOne = cards[0];
-	auto cardTwo = cards[1];
-	auto cardThree = cards[2];
-	auto cardFour = cards[3];
-	auto cardFive = cards[4];
+	auto cardOne = hand[0];
+	auto cardTwo = hand[1];
+	auto cardThree = hand[2];
+	auto cardFour = hand[3];
+	auto cardFive = hand[4];
 
 	return (cardOne.GetNumericalValueFromRank() + 1) == cardTwo.GetNumericalValueFromRank() &&
 		(cardTwo.GetNumericalValueFromRank() + 1) == cardThree.GetNumericalValueFromRank() &&

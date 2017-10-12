@@ -25,7 +25,7 @@ public:
 
                 // Create a deck and hand
                 std::unique_ptr<Deck> deck(new Deck());
-				std::list<Card> cards;
+				std::vector<Card> cards;
                 int numRuns = 0;
 				int outcomes = 0;
 
@@ -52,7 +52,7 @@ public:
 
                 // Create a deck and hand
                 std::unique_ptr<Deck> deck(new Deck());
-				std::list<Card> cards;
+				std::vector<Card> cards;
                 int numRuns = 0;
 				int outcomes = 0;
 
@@ -79,7 +79,7 @@ public:
 
                 // Create a deck and hand
                 std::unique_ptr<Deck> deck(new Deck());
-				std::list<Card> cards;
+				std::vector<Card> cards;
                 int numRuns = 0;
 				int outcomes = 0;
 
@@ -106,7 +106,7 @@ public:
 
 				// Create a deck and hand
 				std::unique_ptr<Deck> deck(new Deck());
-				std::list<Card> cards;
+				std::vector<Card> cards;
 				int numRuns = 0;
 				int outcomes = 0;
 
@@ -133,7 +133,7 @@ public:
 
 				// Create a deck and hand
 				std::unique_ptr<Deck> deck(new Deck());
-				std::list<Card> cards;
+				std::vector<Card> cards;
 				int numRuns = 0;
 				int outcomes = 0;
 
@@ -159,7 +159,7 @@ public:
         }
     }
 
-	static void PrintTestResults(const int numRuns, const int favorableOutcomes, std::list<Card> cards, const std::chrono::steady_clock::time_point begin, const std::chrono::steady_clock::time_point end)
+	static void PrintTestResults(const int numRuns, const int favorableOutcomes, std::vector<Card> cards, const std::chrono::steady_clock::time_point begin, const std::chrono::steady_clock::time_point end)
 	{
 		const auto timeElapsed = std::chrono::duration_cast<std::chrono::milliseconds>(end - begin).count();
 

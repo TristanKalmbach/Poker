@@ -44,7 +44,7 @@ void Deck::PrintDeckDetails()
 // Add 5 cards to hand and return a pointer to it.
 Hand Deck::CreateHand()
 {
-	std::list<Card> hand;
+	std::vector<Card> hand;
     for (int i = 0; i < HAND_SIZE; ++i)
     {
         // Get a random card from the deck

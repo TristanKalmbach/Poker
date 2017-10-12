@@ -18,7 +18,7 @@ void Game::InitializeGame()
 		auto const &playerHand = l_Deck->CreateHand();
 		auto dealerHand = l_Deck->CreateHand();
 
-		std::unique_ptr<Player> player(new Player(playerHand));
+		const std::unique_ptr<Player> player(new Player(playerHand));
 		for (auto const &c : player->GetHand())
 			c.PrintCardDetails();
 

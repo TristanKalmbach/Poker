@@ -11,7 +11,7 @@
 #define NUM_DECKS 1
 #define HAND_SIZE 5
 
-using Hand = std::list<Card>;
+using Hand = std::vector<Card>;
 
 class Deck
 {
