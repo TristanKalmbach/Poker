@@ -105,6 +105,9 @@
 		<Unit filename="/Users/tristankalmbach/CLionProjects/Poker/Game/HandEvaluator.hpp">
 			<Option target="Poker"/>
 		</Unit>
+		<Unit filename="/Users/tristankalmbach/CLionProjects/Poker/Game/HandRankings.hpp">
+			<Option target="Poker"/>
+		</Unit>
 		<Unit filename="/Users/tristankalmbach/CLionProjects/Poker/Testing/Probabilities.hpp">
 			<Option target="Poker"/>
 		</Unit>

@@ -5,7 +5,7 @@
 int main()
 {
     Probabilities* pb = new Probabilities();
-    pb->GetProbabilitiesOfHandConditions();
+    pb->GetProbabilitiesOfHandConditions(HandRanks::Pair);
 
     //std::unique_ptr<Deck> deck(new Deck());
     //deck->PrintDeckDetails();

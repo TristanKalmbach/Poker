@@ -9,11 +9,12 @@
 class HandEvaluator
 {
 public:
-    static bool IsFlush(Hand const &hand);
-    static bool IsRoyalFlush(Hand const &hand);
-    static bool IsStraight(Hand const &hand);
-    static bool HasTwoOfKind(Hand const &hand);
+    static bool HasFlush(Hand const &hand);
+    static bool HasRoyalFlush(Hand const &hand);
+    static bool HasStraight(Hand const &hand);
+    static bool HasPair(Hand const &hand);
     static bool HasThreeOfKind(Hand const &hand);
+    static bool HasTwoPair(Hand const &hand);
     static bool HasFourOfKind(Hand const &hand);
     static bool IsStraightFlush(Hand const &hand);
     static bool IsFullHouse(Hand const &hand);

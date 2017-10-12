@@ -27,6 +27,7 @@ CMakeFiles/Poker.dir/main.cpp.o: ../Cards/CardProperties.hpp
 CMakeFiles/Poker.dir/main.cpp.o: ../Cards/Deck.hpp
 CMakeFiles/Poker.dir/main.cpp.o: ../Cards/Hand.hpp
 CMakeFiles/Poker.dir/main.cpp.o: ../Game/HandEvaluator.hpp
+CMakeFiles/Poker.dir/main.cpp.o: ../Game/HandRankings.hpp
 CMakeFiles/Poker.dir/main.cpp.o: ../Testing/Probabilities.hpp
 CMakeFiles/Poker.dir/main.cpp.o: ../main.cpp
 

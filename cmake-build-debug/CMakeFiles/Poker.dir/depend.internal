@@ -28,5 +28,6 @@ CMakeFiles/Poker.dir/main.cpp.o
  /Users/tristankalmbach/CLionProjects/Poker/Cards/Deck.hpp
  /Users/tristankalmbach/CLionProjects/Poker/Cards/Hand.hpp
  /Users/tristankalmbach/CLionProjects/Poker/Game/HandEvaluator.hpp
+ /Users/tristankalmbach/CLionProjects/Poker/Game/HandRankings.hpp
  /Users/tristankalmbach/CLionProjects/Poker/Testing/Probabilities.hpp
  /Users/tristankalmbach/CLionProjects/Poker/main.cpp

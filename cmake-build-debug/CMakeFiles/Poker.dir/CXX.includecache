@@ -52,11 +52,15 @@ HandEvaluator.hpp
 ../Cards/Hand.hpp
 /Users/tristankalmbach/CLionProjects/Poker/Cards/Hand.hpp
 
+/Users/tristankalmbach/CLionProjects/Poker/Game/HandRankings.hpp
+
 /Users/tristankalmbach/CLionProjects/Poker/Testing/Probabilities.hpp
 ../Cards/Deck.hpp
 /Users/tristankalmbach/CLionProjects/Poker/Cards/Deck.hpp
 ../Game/HandEvaluator.hpp
 /Users/tristankalmbach/CLionProjects/Poker/Game/HandEvaluator.hpp
+../Game/HandRankings.hpp
+/Users/tristankalmbach/CLionProjects/Poker/Game/HandRankings.hpp
 
 /Users/tristankalmbach/CLionProjects/Poker/main.cpp
 Cards/Card.hpp

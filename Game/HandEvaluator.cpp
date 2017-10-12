@@ -4,7 +4,7 @@
 
 #include "HandEvaluator.hpp"
 
-bool HandEvaluator::IsFlush(Hand const &hand)
+bool HandEvaluator::HasFlush(Hand const &hand)
 {
     auto const &cards = hand.GetCardsInHand();
 
@@ -15,7 +15,7 @@ bool HandEvaluator::IsFlush(Hand const &hand)
     return true;
 }
 
-bool HandEvaluator::IsRoyalFlush(Hand const &hand)
+bool HandEvaluator::HasRoyalFlush(Hand const &hand)
 {
     auto const &cards = hand.GetCardsInHand();
 
@@ -26,18 +26,18 @@ bool HandEvaluator::IsRoyalFlush(Hand const &hand)
             return false;
 
         // Must be a flush
-        if (!HandEvaluator::IsFlush(hand))
+        if (!HandEvaluator::HasFlush(hand))
             return false;
 
         // Must be a straight
-        if (!HandEvaluator::IsStraight(hand))
+        if (!HandEvaluator::HasStraight(hand))
             return false;
     }
 
     return true;
 }
 
-bool HandEvaluator::IsStraight(Hand const &hand)
+bool HandEvaluator::HasStraight(Hand const &hand)
 {
     auto const &cards = hand.GetCardsInHand();
 
@@ -54,8 +54,14 @@ bool HandEvaluator::IsStraight(Hand const &hand)
 
 }
 
-bool HandEvaluator::HasTwoOfKind(Hand const &hand)
+bool HandEvaluator::HasPair(Hand const &hand)
 {
-    // TODO
-    return false;
+    std::vector<CardRank> ranks;
+
+    auto const &cards = hand.GetCardsInHand();
+    for (auto const c : cards)
+        ranks.push_back(c.getRank());
+
+    auto it = std::adjacent_find(ranks.begin(), ranks.end());
+    return it != ranks.end();
 }
