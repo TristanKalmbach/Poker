@@ -1,10 +1,7 @@
 ﻿#include "Game.hpp"
 #include "../Cards/Deck.hpp"
 #include "../Game/Player.hpp"
-
-Game::Game()
-{
-}
+#include "Dealer.hpp"
 
 void Game::InitializeGame()
 {
@@ -14,17 +11,28 @@ void Game::InitializeGame()
 		// Initialize the deck. This will be the central deck used in the game by both players (or dealer)
 		std::shared_ptr<Deck> l_Deck(new Deck());
 
-		// Administer hands to the players and dealers
-		auto const &playerHand = l_Deck->CreateHand();
-		auto dealerHand = l_Deck->CreateHand();
-
-		const std::unique_ptr<Player> player(new Player(playerHand));
+		const std::unique_ptr<Player> player(new Player(l_Deck->CreateHand()));
 		for (auto const &c : player->GetHand())
 			c.PrintCardDetails();
 
-		// Start game loop for mechanics
+		const std::unique_ptr<Dealer> dealer(new Dealer(l_Deck->CreateHand()));
+		for (auto const &c : dealer->GetHand())
+			c.PrintCardDetails();
 
 		// Set game to initialized so this method never happens again
 		isInitialized = true;
+
+		// Start game loop for mechanics
+		GameLoop();
 	}
 }
+
+void Game::GameLoop()
+{
+	bool isGameComplete = false;
+	while (!isGameComplete)
+	{
+		
+	}
+}
+

@@ -3,11 +3,13 @@
 //
 
 #include "Card.hpp"
+#include "../Game/Game.hpp"
 
 void Card::PrintCardDetails() const
 {
-    std::string out = GetNameFromRank() + " of " + GetNameFromSuit();
-    std::cout << out << "\n";
+	const std::string out = GetNameFromRank() + " of " + GetNameFromSuit();
+    std::cout << out;
+	std::cout << " -- Flags: 0x" << std::hex << GetFlags() << '\n';
 }
 
 std::pair<int, int> Card::GetCardAsIntPair() const
@@ -134,5 +136,22 @@ int Card::GetNumericalValueFromSuit() const
 		return 4;
 	default:
 		return 0;
+	}
+}
+
+int Card::GetCardRankValue() const
+{
+	switch (getRank())
+	{
+		case CardRank::Ace:
+			return AcesHigh ? 5 : 1;
+		case CardRank::Jack:
+			return 2;
+		case CardRank::Queen:
+			return 3;
+		case CardRank::King:
+			return 4;
+		default:
+			return 1;
 	}
 }

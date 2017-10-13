@@ -13,6 +13,7 @@
 #include <algorithm>
 #include <iomanip>
 #include <list>
+#include <set>
 
 enum class CardSuits : std::uint8_t {
     Club,

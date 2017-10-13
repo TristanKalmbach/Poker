@@ -17,7 +17,8 @@ void RunSimulation()
 
 int main()
 {
-	Game::InitializeGame();
+	//Game::InitializeGame();
+	RunSimulation();
 
     system("pause");
     return 0;

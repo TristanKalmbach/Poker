@@ -74,3 +74,16 @@ bool HandEvaluator::IsEveryCardRoyal(Hand const& hand)
 	
 	return numRoyal == 5;
 }
+
+int HandEvaluator::GetHandRankValue(Hand const& hand)
+{
+	int value = 0;
+
+	// Get the value of all of the cards
+	for (auto const &c : hand)
+		value += c.GetCardRankValue();
+
+	// TODO: Evaluate hand ranks to increase hand value
+
+	return value;
+}

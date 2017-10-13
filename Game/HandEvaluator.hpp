@@ -20,6 +20,8 @@ public:
     static bool IsFullHouse(Hand const &hand);
 	static bool IsEveryCardRoyal(Hand const &hand);
 
+	static int GetHandRankValue(Hand const &hand);
+
 private:
     HandEvaluator();
     ~HandEvaluator();

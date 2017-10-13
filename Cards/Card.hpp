@@ -23,19 +23,18 @@ class Card
 {
 public:
     // Every card has a suit and a value
-	Card(): m_rank(), m_suit(), m_flags()
+	Card() : m_flags()
 	{
 
 	}
 
-	Card(CardSuits suit, CardRank rank): m_flags(FLAG_NONE)
+	explicit Card(const std::pair<CardSuits, CardRank> card): m_flags(FLAG_NONE)
 	{
-		m_suit = suit;
-		m_rank = rank;
+		m_cardDetails = card;
 	}
 
-	CardSuits getSuit() const { return m_suit; }
-    CardRank getRank() const { return m_rank; }
+	CardSuits getSuit() const { return m_cardDetails.first; }
+    CardRank getRank() const { return m_cardDetails.second; }
 
 	// std::pair<suit, rank>
 	std::pair<int, int> GetCardAsIntPair() const;
@@ -52,12 +51,14 @@ public:
     int GetNumericalValueFromRank() const;
 	int GetNumericalValueFromSuit() const;
 
+	// For high card ranking
+	int GetCardRankValue() const;
+
     // Debugging & Test methods
     void PrintCardDetails() const;
 
 private:
-    CardRank m_rank;
-    CardSuits m_suit;
+	std::pair<CardSuits, CardRank> m_cardDetails;
 
 	CardFlags m_flags;
 };

@@ -11,7 +11,7 @@ void Deck::FillDeck()
         for (auto const &s : Suits)
             for (auto const &r : Ranks)
             {
-	            const Card card(s, r);
+	            const Card card(std::make_pair(s, r));
                 m_deck.push_back(card);
             }
 
@@ -49,7 +49,7 @@ Hand Deck::CreateHand()
     {
         // Get a random card from the deck
 	    const Card card = GetRandomCardFromDeck();
-		hand.emplace_back(card);
+		hand.push_back(card);
     }
 
     return hand;
@@ -67,7 +67,10 @@ Card Deck::GetRandomCardFromDeck()
     };
 
     // Assign whatever random card we just got to a card object.
-	auto &card = GetRandom(m_deck);
+	Card card = GetRandom(m_deck);
+	while (card.GetFlags() == CardFlags::FLAG_CARD_DRAWN)
+		card = GetRandom(m_deck);
 
+	card.SetFlags(CardFlags::FLAG_CARD_DRAWN);
     return card;
 }

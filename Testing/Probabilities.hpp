@@ -166,7 +166,7 @@ public:
 		std::cout << "Check ran: " << numRuns << " times." << '\n';
 		std::cout << "Number of favorable outcomes: " << favorableOutcomes << '\n';
 		std::cout << "\nTime elapsed: " << timeElapsed << " ms. " << '\n';
-
+		std::cout << "\nHand Value: " << HandEvaluator::GetHandRankValue(cards) << '\n';
 		std::cout << "\nCards drawn were: " << '\n';
 		for (auto const &c : cards)
 			c.PrintCardDetails();
