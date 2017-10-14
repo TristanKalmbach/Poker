@@ -1,6 +1,6 @@
 ﻿#pragma once
 
-#include "../Cards/CardProperties.hpp"
+#include "CardProperties.hpp"
 
 static const bool AcesHigh = true;
 

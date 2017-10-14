@@ -1,6 +1,6 @@
 ﻿#include "Game.hpp"
-#include "../Cards/Deck.hpp"
-#include "../Game/Player.hpp"
+#include "Deck.hpp"
+#include "Player.hpp"
 #include "Dealer.hpp"
 
 void Game::InitializeGame()
@@ -12,11 +12,11 @@ void Game::InitializeGame()
 		std::shared_ptr<Deck> l_Deck(new Deck());
 
 		const std::unique_ptr<Player> player(new Player(l_Deck->CreateHand()));
-		for (auto const &c : player->GetHand())
+		for (auto const& c : player->GetHand())
 			c.PrintCardDetails();
 
 		const std::unique_ptr<Dealer> dealer(new Dealer(l_Deck->CreateHand()));
-		for (auto const &c : dealer->GetHand())
+		for (auto const& c : dealer->GetHand())
 			c.PrintCardDetails();
 
 		// Set game to initialized so this method never happens again
@@ -32,7 +32,5 @@ void Game::GameLoop()
 	bool isGameComplete = false;
 	while (!isGameComplete)
 	{
-		
 	}
 }
-
