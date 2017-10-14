@@ -10,230 +10,233 @@
 
 #include <chrono>
 
-class Probabilities
+namespace Testing
 {
-public:
-
-	static void GetProbabilitiesOfHandConditions(const HandRanks handRanks, const int desiredFavorableOutcomes)
+	class Probabilities
 	{
-		// Create a deck and hand
-		std::unique_ptr<Deck> deck(new Deck());
-		std::vector<Card> cards;
+	public:
 
-		int numRuns = 0;
-		int outcomes = 0;
-
-		switch (handRanks)
+		static void GetProbabilitiesOfHandConditions(const HandRanks handRanks, const int desiredFavorableOutcomes)
 		{
-		case HandRanks::Pair:
+			// Create a deck and hand
+			std::unique_ptr<Deck> deck(new Deck());
+			std::vector<Card> cards;
+
+			int numRuns = 0;
+			int outcomes = 0;
+
+			switch (handRanks)
 			{
-				// Start time benchmark
-				const auto begin = std::chrono::steady_clock::now();
-
-				while (outcomes < desiredFavorableOutcomes)
+			case HandRanks::Pair:
 				{
-					const auto hand = deck->CreateHand();
-					cards = hand;
+					// Start time benchmark
+					const auto begin = std::chrono::steady_clock::now();
 
-					if (HandEvaluator::HasPair(hand))
-						++outcomes;
+					while (outcomes < desiredFavorableOutcomes)
+					{
+						const auto hand = deck->CreateHand();
+						cards = hand;
 
-					++numRuns;
+						if (HandEvaluator::HasPair(hand))
+							++outcomes;
+
+						++numRuns;
+					}
+
+					// End time benchmark and print results
+					const auto end = std::chrono::steady_clock::now();
+					PrintTestResults(numRuns, outcomes, cards, begin, end);
 				}
-
-				// End time benchmark and print results
-				const auto end = std::chrono::steady_clock::now();
-				PrintTestResults(numRuns, outcomes, cards, begin, end);
-			}
-			break;
-		case HandRanks::Flush:
-			{
-				// Start time benchmark
-				const auto begin = std::chrono::steady_clock::now();
-
-				while (outcomes < desiredFavorableOutcomes)
+				break;
+			case HandRanks::Flush:
 				{
-					auto const& hand = deck->CreateHand();
-					cards = hand;
+					// Start time benchmark
+					const auto begin = std::chrono::steady_clock::now();
 
-					if (HandEvaluator::HasFlush(hand))
-						++outcomes;
+					while (outcomes < desiredFavorableOutcomes)
+					{
+						auto const& hand = deck->CreateHand();
+						cards = hand;
 
-					++numRuns;
+						if (HandEvaluator::HasFlush(hand))
+							++outcomes;
+
+						++numRuns;
+					}
+
+					// End time benchmark and print results
+					const auto end = std::chrono::steady_clock::now();
+					PrintTestResults(numRuns, outcomes, cards, begin, end);
 				}
-
-				// End time benchmark and print results
-				const auto end = std::chrono::steady_clock::now();
-				PrintTestResults(numRuns, outcomes, cards, begin, end);
-			}
-			break;
-		case HandRanks::Straight:
-			{
-				// Start time benchmark
-				const auto begin = std::chrono::steady_clock::now();
-
-				while (outcomes < desiredFavorableOutcomes)
+				break;
+			case HandRanks::Straight:
 				{
-					auto const& hand = deck->CreateHand();
-					cards = hand;
+					// Start time benchmark
+					const auto begin = std::chrono::steady_clock::now();
 
-					if (HandEvaluator::HasStraight(hand))
-						++outcomes;
+					while (outcomes < desiredFavorableOutcomes)
+					{
+						auto const& hand = deck->CreateHand();
+						cards = hand;
 
-					++numRuns;
+						if (HandEvaluator::HasStraight(hand))
+							++outcomes;
+
+						++numRuns;
+					}
+
+					// End time benchmark and print results
+					const auto end = std::chrono::steady_clock::now();
+					PrintTestResults(numRuns, outcomes, cards, begin, end);
 				}
-
-				// End time benchmark and print results
-				const auto end = std::chrono::steady_clock::now();
-				PrintTestResults(numRuns, outcomes, cards, begin, end);
-			}
-			break;
-		case HandRanks::StraightFlush:
-			{
-				// Start time benchmark
-				const auto begin = std::chrono::steady_clock::now();
-
-				while (outcomes < desiredFavorableOutcomes)
+				break;
+			case HandRanks::StraightFlush:
 				{
-					auto const& hand = deck->CreateHand();
-					cards = hand;
+					// Start time benchmark
+					const auto begin = std::chrono::steady_clock::now();
 
-					if (HandEvaluator::HasStraightFlush(hand))
-						++outcomes;
+					while (outcomes < desiredFavorableOutcomes)
+					{
+						auto const& hand = deck->CreateHand();
+						cards = hand;
 
-					++numRuns;
+						if (HandEvaluator::HasStraightFlush(hand))
+							++outcomes;
+
+						++numRuns;
+					}
+
+					// End time benchmark and print results
+					const auto end = std::chrono::steady_clock::now();
+					PrintTestResults(numRuns, outcomes, cards, begin, end);
 				}
-
-				// End time benchmark and print results
-				const auto end = std::chrono::steady_clock::now();
-				PrintTestResults(numRuns, outcomes, cards, begin, end);
-			}
-			break;
-		case HandRanks::RoyalFlush:
-			{
-				// Start time benchmark
-				const auto begin = std::chrono::steady_clock::now();
-
-				while (outcomes < desiredFavorableOutcomes)
+				break;
+			case HandRanks::RoyalFlush:
 				{
-					auto const& hand = deck->CreateHand();
-					cards = hand;
+					// Start time benchmark
+					const auto begin = std::chrono::steady_clock::now();
 
-					// Check if the hand is a straight flush
-					if (HandEvaluator::HasRoyalFlush(hand))
-						++outcomes;
+					while (outcomes < desiredFavorableOutcomes)
+					{
+						auto const& hand = deck->CreateHand();
+						cards = hand;
 
-					++numRuns;
+						// Check if the hand is a straight flush
+						if (HandEvaluator::HasRoyalFlush(hand))
+							++outcomes;
+
+						++numRuns;
+					}
+
+					// End time benchmark and print results
+					const auto end = std::chrono::steady_clock::now();
+					PrintTestResults(numRuns, outcomes, cards, begin, end);
 				}
-
-				// End time benchmark and print results
-				const auto end = std::chrono::steady_clock::now();
-				PrintTestResults(numRuns, outcomes, cards, begin, end);
-			}
-			break;
-		case HandRanks::ThreeOfAKind:
-			{
-				// Start time benchmark
-				const auto begin = std::chrono::steady_clock::now();
-
-				while (outcomes < desiredFavorableOutcomes)
+				break;
+			case HandRanks::ThreeOfAKind:
 				{
-					auto const& hand = deck->CreateHand();
-					cards = hand;
+					// Start time benchmark
+					const auto begin = std::chrono::steady_clock::now();
 
-					// Check if the hand is a straight flush
-					if (HandEvaluator::HasThreeOfKind(hand))
-						++outcomes;
+					while (outcomes < desiredFavorableOutcomes)
+					{
+						auto const& hand = deck->CreateHand();
+						cards = hand;
 
-					++numRuns;
+						// Check if the hand is a straight flush
+						if (HandEvaluator::HasThreeOfKind(hand))
+							++outcomes;
+
+						++numRuns;
+					}
+
+					// End time benchmark and print results
+					const auto end = std::chrono::steady_clock::now();
+					PrintTestResults(numRuns, outcomes, cards, begin, end);
 				}
-
-				// End time benchmark and print results
-				const auto end = std::chrono::steady_clock::now();
-				PrintTestResults(numRuns, outcomes, cards, begin, end);
-			}
-			break;
-		case HandRanks::FourOfAKind:
-			{
-				// Start time benchmark
-				const auto begin = std::chrono::steady_clock::now();
-
-				while (outcomes < desiredFavorableOutcomes)
+				break;
+			case HandRanks::FourOfAKind:
 				{
-					auto const& hand = deck->CreateHand();
-					cards = hand;
+					// Start time benchmark
+					const auto begin = std::chrono::steady_clock::now();
 
-					// Check if the hand is a straight flush
-					if (HandEvaluator::HasFourOfKind(hand))
-						++outcomes;
+					while (outcomes < desiredFavorableOutcomes)
+					{
+						auto const& hand = deck->CreateHand();
+						cards = hand;
 
-					++numRuns;
+						// Check if the hand is a straight flush
+						if (HandEvaluator::HasFourOfKind(hand))
+							++outcomes;
+
+						++numRuns;
+					}
+
+					// End time benchmark and print results
+					const auto end = std::chrono::steady_clock::now();
+					PrintTestResults(numRuns, outcomes, cards, begin, end);
 				}
-
-				// End time benchmark and print results
-				const auto end = std::chrono::steady_clock::now();
-				PrintTestResults(numRuns, outcomes, cards, begin, end);
-			}
-			break;
-		case HandRanks::FullHouse:
-			{
-				// Start time benchmark
-				const auto begin = std::chrono::steady_clock::now();
-
-				while (outcomes < desiredFavorableOutcomes)
+				break;
+			case HandRanks::FullHouse:
 				{
-					auto const& hand = deck->CreateHand();
-					cards = hand;
+					// Start time benchmark
+					const auto begin = std::chrono::steady_clock::now();
 
-					// Check if the hand is a straight flush
-					if (HandEvaluator::HasFullHouse(hand))
-						++outcomes;
+					while (outcomes < desiredFavorableOutcomes)
+					{
+						auto const& hand = deck->CreateHand();
+						cards = hand;
 
-					++numRuns;
+						// Check if the hand is a straight flush
+						if (HandEvaluator::HasFullHouse(hand))
+							++outcomes;
+
+						++numRuns;
+					}
+
+					// End time benchmark and print results
+					const auto end = std::chrono::steady_clock::now();
+					PrintTestResults(numRuns, outcomes, cards, begin, end);
 				}
-
-				// End time benchmark and print results
-				const auto end = std::chrono::steady_clock::now();
-				PrintTestResults(numRuns, outcomes, cards, begin, end);
-			}
-		case HandRanks::AllRoyal:
-			{
-				// Start time benchmark
-				const auto begin = std::chrono::steady_clock::now();
-
-				while (outcomes < desiredFavorableOutcomes)
+			case HandRanks::AllRoyal:
 				{
-					auto const& hand = deck->CreateHand();
-					cards = hand;
+					// Start time benchmark
+					const auto begin = std::chrono::steady_clock::now();
 
-					// Check if the hand is a straight flush
-					if (HandEvaluator::IsEveryCardRoyal(hand))
-						++outcomes;
+					while (outcomes < desiredFavorableOutcomes)
+					{
+						auto const& hand = deck->CreateHand();
+						cards = hand;
 
-					++numRuns;
+						// Check if the hand is a straight flush
+						if (HandEvaluator::IsEveryCardRoyal(hand))
+							++outcomes;
+
+						++numRuns;
+					}
+
+					// End time benchmark and print results
+					const auto end = std::chrono::steady_clock::now();
+					PrintTestResults(numRuns, outcomes, cards, begin, end);
 				}
-
-				// End time benchmark and print results
-				const auto end = std::chrono::steady_clock::now();
-				PrintTestResults(numRuns, outcomes, cards, begin, end);
+			default:
+				break;
 			}
-		default:
-			break;
 		}
-	}
 
-	static void PrintTestResults(const int numRuns, const int favorableOutcomes, std::vector<Card> cards,
-	                             const std::chrono::steady_clock::time_point begin,
-	                             const std::chrono::steady_clock::time_point end)
-	{
-		const auto timeElapsed = std::chrono::duration_cast<std::chrono::milliseconds>(end - begin).count();
+		static void PrintTestResults(const int numRuns, const int favorableOutcomes, std::vector<Card> cards,
+		                             const std::chrono::steady_clock::time_point begin,
+		                             const std::chrono::steady_clock::time_point end)
+		{
+			const auto timeElapsed = std::chrono::duration_cast<std::chrono::milliseconds>(end - begin).count();
 
-		std::cout << "Check ran: " << numRuns << " times." << '\n';
-		std::cout << "Number of favorable outcomes: " << favorableOutcomes << '\n';
-		std::cout << "\nTime elapsed: " << timeElapsed << " ms. " << '\n';
-		std::cout << "\nHand Value: " << HandEvaluator::GetHandRankValue(cards) << '\n';
-		std::cout << "\nCards drawn were: " << '\n';
-		for (auto const& c : cards)
-			c.PrintCardDetails();
-	}
-};
+			std::cout << "Check ran: " << numRuns << " times." << '\n';
+			std::cout << "Number of favorable outcomes: " << favorableOutcomes << '\n';
+			std::cout << "\nTime elapsed: " << timeElapsed << " ms. " << '\n';
+			std::cout << "\nHand Value: " << HandEvaluator::GetHandRankValue(cards) << '\n';
+			std::cout << "\nCards drawn were: " << '\n';
+			for (auto const& c : cards)
+				c.PrintCardDetails();
+		}
+	};
+}

@@ -8,16 +8,26 @@ file(GLOB SOURCES src/*.cpp src/*.hpp)
 
 project (Poker)
 
+# Set version information in a config.h file
+set(myproject_VERSION_MAJOR 1)
+set(myproject_VERSION_MINOR 0)
+configure_file(
+  "${PROJECT_SOURCE_DIR}/config.h.in"
+  "${PROJECT_BINARY_DIR}/config.h"
+  )
+include_directories("${PROJECT_BINARY_DIR}")
+
 set (PROJECT_SOURCE_DECLARATION_DIRECTORY ${PROJECT_SOURCE_DIR}/include)
 set (PROJECT_SOURCE_DEFINITION_DIRECTORY ${PROJECT_SOURCE_DIR}/src)
 
 # Set options used by "CMake".
 set (CMAKE_RUNTIME_OUTPUT_DIRECTORY ${PROJECT_SOURCE_DIR}/bin)
 
+# Detect and add SFML
 set(CMAKE_MODULE_PATH "${CMAKE_SOURCE_DIR}/cmake/macros")
+find_package(SFML 2 REQUIRED COMPONENTS network audio graphics window system)
 
 # Set options used by "FindBoost.cmake".
-
 # Either specify BOOST_ROOT or BOOST_INCLUDEDIR and BOOST_LIBRARYDIR.
 # I am using "MinGW Distro" in this example, but also a relative path, e. g.
 # "vendor/boost" can be specified.
@@ -55,4 +65,4 @@ endif ()
 add_executable (${PROJECT_NAME} ${SOURCES})
 
 # "Link a target to given libraries."
-target_link_libraries (${PROJECT_NAME} ${Boost_LIBRARIES})
+target_link_libraries (${PROJECT_NAME} ${Boost_LIBRARIES} ${SFML_LIBRARIES} ${SFML_DEPENDENCIES})
