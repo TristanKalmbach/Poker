@@ -7,9 +7,6 @@
 #include "Deck.hpp"
 #include <numeric>
 
-#include <boost/algorithm/cxx11/all_of.hpp>
-#include <boost/algorithm/cxx11/none_of.hpp>
-
 class HandEvaluator
 {
 public:

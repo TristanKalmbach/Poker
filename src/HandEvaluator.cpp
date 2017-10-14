@@ -3,7 +3,6 @@
 //
 
 #include "HandEvaluator.hpp"
-#include <boost/algorithm/algorithm.hpp>
 
 bool HandEvaluator::HasFlush(Hand const& hand)
 {
@@ -107,7 +106,7 @@ bool HandEvaluator::IsEveryCardRoyal(Hand const& hand)
 {
 	std::vector<int> ranks = Deck::GetHandAsInts(hand);
 
-	return boost::algorithm::all_of(ranks.begin(), ranks.end(), [](int r)
+	return std::all_of(ranks.begin(), ranks.end(), [](int r)
                                 {
 	                                return r >= 10;
                                 });
