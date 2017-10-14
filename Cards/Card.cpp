@@ -5,25 +5,21 @@
 #include "Card.hpp"
 #include "../Game/Game.hpp"
 
-void Card::PrintCardDetails() const
-{
-	const std::string out = GetNameFromRank() + " of " + GetNameFromSuit();
+void Card::PrintCardDetails() const {
+    const std::string out = GetNameFromRank() + " of " + GetNameFromSuit();
     std::cout << out;
-	std::cout << " -- Flags: 0x" << std::hex << GetFlags() << '\n';
+    std::cout << " -- Flags: 0x" << std::hex << GetFlags() << '\n';
 }
 
-std::pair<int, int> Card::GetCardAsIntPair() const
-{
-	int suit = GetNumericalValueFromSuit();
-	int rank = GetNumericalValueFromRank();
+std::pair<int, int> Card::GetCardAsIntPair() const {
+    int suit = GetNumericalValueFromSuit();
+    int rank = GetNumericalValueFromRank();
 
-	return std::make_pair(suit, rank);
+    return std::make_pair(suit, rank);
 }
 
-std::string Card::GetNameFromRank() const
-{
-    switch (getRank())
-    {
+std::string Card::GetNameFromRank() const {
+    switch (getRank()) {
         case CardRank::Ace:
             return "Ace";
         case CardRank::Two:
@@ -55,10 +51,8 @@ std::string Card::GetNameFromRank() const
     }
 }
 
-std::string Card::GetNameFromSuit() const
-{
-    switch (getSuit())
-    {
+std::string Card::GetNameFromSuit() const {
+    switch (getSuit()) {
         case CardSuits::Club:
             return "Clubs";
         case CardSuits::Diamond:
@@ -72,10 +66,8 @@ std::string Card::GetNameFromSuit() const
     }
 }
 
-bool Card::IsCardRoyal() const
-{
-    switch (getRank())
-    {
+bool Card::IsCardRoyal() const {
+    switch (getRank()) {
         case CardRank::Ten:
         case CardRank::Jack:
         case CardRank::Queen:
@@ -87,10 +79,8 @@ bool Card::IsCardRoyal() const
     }
 }
 
-int Card::GetNumericalValueFromRank() const
-{
-    switch (getRank())
-    {
+int Card::GetNumericalValueFromRank() const {
+    switch (getRank()) {
         case CardRank::Ace:
             return 14;
         case CardRank::Two:
@@ -122,36 +112,32 @@ int Card::GetNumericalValueFromRank() const
     }
 }
 
-int Card::GetNumericalValueFromSuit() const
-{
-	switch (getSuit())
-	{
-	case CardSuits::Club:
-		return 1;
-	case CardSuits::Diamond:
-		return 2;
-	case CardSuits::Heart:
-		return 3;
-	case CardSuits::Spade:
-		return 4;
-	default:
-		return 0;
-	}
+int Card::GetNumericalValueFromSuit() const {
+    switch (getSuit()) {
+        case CardSuits::Club:
+            return 1;
+        case CardSuits::Diamond:
+            return 2;
+        case CardSuits::Heart:
+            return 3;
+        case CardSuits::Spade:
+            return 4;
+        default:
+            return 0;
+    }
 }
 
-int Card::GetCardRankValue() const
-{
-	switch (getRank())
-	{
-		case CardRank::Ace:
-			return AcesHigh ? 5 : 1;
-		case CardRank::Jack:
-			return 2;
-		case CardRank::Queen:
-			return 3;
-		case CardRank::King:
-			return 4;
-		default:
-			return 1;
-	}
+int Card::GetCardRankValue() const {
+    switch (getRank()) {
+        case CardRank::Ace:
+            return AcesHigh ? 5 : 1;
+        case CardRank::Jack:
+            return 2;
+        case CardRank::Queen:
+            return 3;
+        case CardRank::King:
+            return 4;
+        default:
+            return 1;
+    }
 }

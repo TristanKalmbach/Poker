@@ -129,33 +129,9 @@ CMakeFiles/Poker.dir/Cards/Deck.cpp.o.provides: CMakeFiles/Poker.dir/Cards/Deck.
 CMakeFiles/Poker.dir/Cards/Deck.cpp.o.provides.build: CMakeFiles/Poker.dir/Cards/Deck.cpp.o
 
 
-CMakeFiles/Poker.dir/Cards/Hand.cpp.o: CMakeFiles/Poker.dir/flags.make
-CMakeFiles/Poker.dir/Cards/Hand.cpp.o: ../Cards/Hand.cpp
-	@$(CMAKE_COMMAND) -E cmake_echo_color --switch=$(COLOR) --green --progress-dir=/Users/tristankalmbach/CLionProjects/Poker/cmake-build-debug/CMakeFiles --progress-num=$(CMAKE_PROGRESS_4) "Building CXX object CMakeFiles/Poker.dir/Cards/Hand.cpp.o"
-	/Applications/Xcode.app/Contents/Developer/Toolchains/XcodeDefault.xctoolchain/usr/bin/c++  $(CXX_DEFINES) $(CXX_INCLUDES) $(CXX_FLAGS) -o CMakeFiles/Poker.dir/Cards/Hand.cpp.o -c /Users/tristankalmbach/CLionProjects/Poker/Cards/Hand.cpp
-
-CMakeFiles/Poker.dir/Cards/Hand.cpp.i: cmake_force
-	@$(CMAKE_COMMAND) -E cmake_echo_color --switch=$(COLOR) --green "Preprocessing CXX source to CMakeFiles/Poker.dir/Cards/Hand.cpp.i"
-	/Applications/Xcode.app/Contents/Developer/Toolchains/XcodeDefault.xctoolchain/usr/bin/c++ $(CXX_DEFINES) $(CXX_INCLUDES) $(CXX_FLAGS) -E /Users/tristankalmbach/CLionProjects/Poker/Cards/Hand.cpp > CMakeFiles/Poker.dir/Cards/Hand.cpp.i
-
-CMakeFiles/Poker.dir/Cards/Hand.cpp.s: cmake_force
-	@$(CMAKE_COMMAND) -E cmake_echo_color --switch=$(COLOR) --green "Compiling CXX source to assembly CMakeFiles/Poker.dir/Cards/Hand.cpp.s"
-	/Applications/Xcode.app/Contents/Developer/Toolchains/XcodeDefault.xctoolchain/usr/bin/c++ $(CXX_DEFINES) $(CXX_INCLUDES) $(CXX_FLAGS) -S /Users/tristankalmbach/CLionProjects/Poker/Cards/Hand.cpp -o CMakeFiles/Poker.dir/Cards/Hand.cpp.s
-
-CMakeFiles/Poker.dir/Cards/Hand.cpp.o.requires:
-
-.PHONY : CMakeFiles/Poker.dir/Cards/Hand.cpp.o.requires
-
-CMakeFiles/Poker.dir/Cards/Hand.cpp.o.provides: CMakeFiles/Poker.dir/Cards/Hand.cpp.o.requires
-	$(MAKE) -f CMakeFiles/Poker.dir/build.make CMakeFiles/Poker.dir/Cards/Hand.cpp.o.provides.build
-.PHONY : CMakeFiles/Poker.dir/Cards/Hand.cpp.o.provides
-
-CMakeFiles/Poker.dir/Cards/Hand.cpp.o.provides.build: CMakeFiles/Poker.dir/Cards/Hand.cpp.o
-
-
 CMakeFiles/Poker.dir/Game/HandEvaluator.cpp.o: CMakeFiles/Poker.dir/flags.make
 CMakeFiles/Poker.dir/Game/HandEvaluator.cpp.o: ../Game/HandEvaluator.cpp
-	@$(CMAKE_COMMAND) -E cmake_echo_color --switch=$(COLOR) --green --progress-dir=/Users/tristankalmbach/CLionProjects/Poker/cmake-build-debug/CMakeFiles --progress-num=$(CMAKE_PROGRESS_5) "Building CXX object CMakeFiles/Poker.dir/Game/HandEvaluator.cpp.o"
+	@$(CMAKE_COMMAND) -E cmake_echo_color --switch=$(COLOR) --green --progress-dir=/Users/tristankalmbach/CLionProjects/Poker/cmake-build-debug/CMakeFiles --progress-num=$(CMAKE_PROGRESS_4) "Building CXX object CMakeFiles/Poker.dir/Game/HandEvaluator.cpp.o"
 	/Applications/Xcode.app/Contents/Developer/Toolchains/XcodeDefault.xctoolchain/usr/bin/c++  $(CXX_DEFINES) $(CXX_INCLUDES) $(CXX_FLAGS) -o CMakeFiles/Poker.dir/Game/HandEvaluator.cpp.o -c /Users/tristankalmbach/CLionProjects/Poker/Game/HandEvaluator.cpp
 
 CMakeFiles/Poker.dir/Game/HandEvaluator.cpp.i: cmake_force
@@ -177,13 +153,112 @@ CMakeFiles/Poker.dir/Game/HandEvaluator.cpp.o.provides: CMakeFiles/Poker.dir/Gam
 CMakeFiles/Poker.dir/Game/HandEvaluator.cpp.o.provides.build: CMakeFiles/Poker.dir/Game/HandEvaluator.cpp.o
 
 
+CMakeFiles/Poker.dir/Game/Game.cpp.o: CMakeFiles/Poker.dir/flags.make
+CMakeFiles/Poker.dir/Game/Game.cpp.o: ../Game/Game.cpp
+	@$(CMAKE_COMMAND) -E cmake_echo_color --switch=$(COLOR) --green --progress-dir=/Users/tristankalmbach/CLionProjects/Poker/cmake-build-debug/CMakeFiles --progress-num=$(CMAKE_PROGRESS_5) "Building CXX object CMakeFiles/Poker.dir/Game/Game.cpp.o"
+	/Applications/Xcode.app/Contents/Developer/Toolchains/XcodeDefault.xctoolchain/usr/bin/c++  $(CXX_DEFINES) $(CXX_INCLUDES) $(CXX_FLAGS) -o CMakeFiles/Poker.dir/Game/Game.cpp.o -c /Users/tristankalmbach/CLionProjects/Poker/Game/Game.cpp
+
+CMakeFiles/Poker.dir/Game/Game.cpp.i: cmake_force
+	@$(CMAKE_COMMAND) -E cmake_echo_color --switch=$(COLOR) --green "Preprocessing CXX source to CMakeFiles/Poker.dir/Game/Game.cpp.i"
+	/Applications/Xcode.app/Contents/Developer/Toolchains/XcodeDefault.xctoolchain/usr/bin/c++ $(CXX_DEFINES) $(CXX_INCLUDES) $(CXX_FLAGS) -E /Users/tristankalmbach/CLionProjects/Poker/Game/Game.cpp > CMakeFiles/Poker.dir/Game/Game.cpp.i
+
+CMakeFiles/Poker.dir/Game/Game.cpp.s: cmake_force
+	@$(CMAKE_COMMAND) -E cmake_echo_color --switch=$(COLOR) --green "Compiling CXX source to assembly CMakeFiles/Poker.dir/Game/Game.cpp.s"
+	/Applications/Xcode.app/Contents/Developer/Toolchains/XcodeDefault.xctoolchain/usr/bin/c++ $(CXX_DEFINES) $(CXX_INCLUDES) $(CXX_FLAGS) -S /Users/tristankalmbach/CLionProjects/Poker/Game/Game.cpp -o CMakeFiles/Poker.dir/Game/Game.cpp.s
+
+CMakeFiles/Poker.dir/Game/Game.cpp.o.requires:
+
+.PHONY : CMakeFiles/Poker.dir/Game/Game.cpp.o.requires
+
+CMakeFiles/Poker.dir/Game/Game.cpp.o.provides: CMakeFiles/Poker.dir/Game/Game.cpp.o.requires
+	$(MAKE) -f CMakeFiles/Poker.dir/build.make CMakeFiles/Poker.dir/Game/Game.cpp.o.provides.build
+.PHONY : CMakeFiles/Poker.dir/Game/Game.cpp.o.provides
+
+CMakeFiles/Poker.dir/Game/Game.cpp.o.provides.build: CMakeFiles/Poker.dir/Game/Game.cpp.o
+
+
+CMakeFiles/Poker.dir/Game/Player.cpp.o: CMakeFiles/Poker.dir/flags.make
+CMakeFiles/Poker.dir/Game/Player.cpp.o: ../Game/Player.cpp
+	@$(CMAKE_COMMAND) -E cmake_echo_color --switch=$(COLOR) --green --progress-dir=/Users/tristankalmbach/CLionProjects/Poker/cmake-build-debug/CMakeFiles --progress-num=$(CMAKE_PROGRESS_6) "Building CXX object CMakeFiles/Poker.dir/Game/Player.cpp.o"
+	/Applications/Xcode.app/Contents/Developer/Toolchains/XcodeDefault.xctoolchain/usr/bin/c++  $(CXX_DEFINES) $(CXX_INCLUDES) $(CXX_FLAGS) -o CMakeFiles/Poker.dir/Game/Player.cpp.o -c /Users/tristankalmbach/CLionProjects/Poker/Game/Player.cpp
+
+CMakeFiles/Poker.dir/Game/Player.cpp.i: cmake_force
+	@$(CMAKE_COMMAND) -E cmake_echo_color --switch=$(COLOR) --green "Preprocessing CXX source to CMakeFiles/Poker.dir/Game/Player.cpp.i"
+	/Applications/Xcode.app/Contents/Developer/Toolchains/XcodeDefault.xctoolchain/usr/bin/c++ $(CXX_DEFINES) $(CXX_INCLUDES) $(CXX_FLAGS) -E /Users/tristankalmbach/CLionProjects/Poker/Game/Player.cpp > CMakeFiles/Poker.dir/Game/Player.cpp.i
+
+CMakeFiles/Poker.dir/Game/Player.cpp.s: cmake_force
+	@$(CMAKE_COMMAND) -E cmake_echo_color --switch=$(COLOR) --green "Compiling CXX source to assembly CMakeFiles/Poker.dir/Game/Player.cpp.s"
+	/Applications/Xcode.app/Contents/Developer/Toolchains/XcodeDefault.xctoolchain/usr/bin/c++ $(CXX_DEFINES) $(CXX_INCLUDES) $(CXX_FLAGS) -S /Users/tristankalmbach/CLionProjects/Poker/Game/Player.cpp -o CMakeFiles/Poker.dir/Game/Player.cpp.s
+
+CMakeFiles/Poker.dir/Game/Player.cpp.o.requires:
+
+.PHONY : CMakeFiles/Poker.dir/Game/Player.cpp.o.requires
+
+CMakeFiles/Poker.dir/Game/Player.cpp.o.provides: CMakeFiles/Poker.dir/Game/Player.cpp.o.requires
+	$(MAKE) -f CMakeFiles/Poker.dir/build.make CMakeFiles/Poker.dir/Game/Player.cpp.o.provides.build
+.PHONY : CMakeFiles/Poker.dir/Game/Player.cpp.o.provides
+
+CMakeFiles/Poker.dir/Game/Player.cpp.o.provides.build: CMakeFiles/Poker.dir/Game/Player.cpp.o
+
+
+CMakeFiles/Poker.dir/Game/Dealer.cpp.o: CMakeFiles/Poker.dir/flags.make
+CMakeFiles/Poker.dir/Game/Dealer.cpp.o: ../Game/Dealer.cpp
+	@$(CMAKE_COMMAND) -E cmake_echo_color --switch=$(COLOR) --green --progress-dir=/Users/tristankalmbach/CLionProjects/Poker/cmake-build-debug/CMakeFiles --progress-num=$(CMAKE_PROGRESS_7) "Building CXX object CMakeFiles/Poker.dir/Game/Dealer.cpp.o"
+	/Applications/Xcode.app/Contents/Developer/Toolchains/XcodeDefault.xctoolchain/usr/bin/c++  $(CXX_DEFINES) $(CXX_INCLUDES) $(CXX_FLAGS) -o CMakeFiles/Poker.dir/Game/Dealer.cpp.o -c /Users/tristankalmbach/CLionProjects/Poker/Game/Dealer.cpp
+
+CMakeFiles/Poker.dir/Game/Dealer.cpp.i: cmake_force
+	@$(CMAKE_COMMAND) -E cmake_echo_color --switch=$(COLOR) --green "Preprocessing CXX source to CMakeFiles/Poker.dir/Game/Dealer.cpp.i"
+	/Applications/Xcode.app/Contents/Developer/Toolchains/XcodeDefault.xctoolchain/usr/bin/c++ $(CXX_DEFINES) $(CXX_INCLUDES) $(CXX_FLAGS) -E /Users/tristankalmbach/CLionProjects/Poker/Game/Dealer.cpp > CMakeFiles/Poker.dir/Game/Dealer.cpp.i
+
+CMakeFiles/Poker.dir/Game/Dealer.cpp.s: cmake_force
+	@$(CMAKE_COMMAND) -E cmake_echo_color --switch=$(COLOR) --green "Compiling CXX source to assembly CMakeFiles/Poker.dir/Game/Dealer.cpp.s"
+	/Applications/Xcode.app/Contents/Developer/Toolchains/XcodeDefault.xctoolchain/usr/bin/c++ $(CXX_DEFINES) $(CXX_INCLUDES) $(CXX_FLAGS) -S /Users/tristankalmbach/CLionProjects/Poker/Game/Dealer.cpp -o CMakeFiles/Poker.dir/Game/Dealer.cpp.s
+
+CMakeFiles/Poker.dir/Game/Dealer.cpp.o.requires:
+
+.PHONY : CMakeFiles/Poker.dir/Game/Dealer.cpp.o.requires
+
+CMakeFiles/Poker.dir/Game/Dealer.cpp.o.provides: CMakeFiles/Poker.dir/Game/Dealer.cpp.o.requires
+	$(MAKE) -f CMakeFiles/Poker.dir/build.make CMakeFiles/Poker.dir/Game/Dealer.cpp.o.provides.build
+.PHONY : CMakeFiles/Poker.dir/Game/Dealer.cpp.o.provides
+
+CMakeFiles/Poker.dir/Game/Dealer.cpp.o.provides.build: CMakeFiles/Poker.dir/Game/Dealer.cpp.o
+
+
+CMakeFiles/Poker.dir/Game/Controller.cpp.o: CMakeFiles/Poker.dir/flags.make
+CMakeFiles/Poker.dir/Game/Controller.cpp.o: ../Game/Controller.cpp
+	@$(CMAKE_COMMAND) -E cmake_echo_color --switch=$(COLOR) --green --progress-dir=/Users/tristankalmbach/CLionProjects/Poker/cmake-build-debug/CMakeFiles --progress-num=$(CMAKE_PROGRESS_8) "Building CXX object CMakeFiles/Poker.dir/Game/Controller.cpp.o"
+	/Applications/Xcode.app/Contents/Developer/Toolchains/XcodeDefault.xctoolchain/usr/bin/c++  $(CXX_DEFINES) $(CXX_INCLUDES) $(CXX_FLAGS) -o CMakeFiles/Poker.dir/Game/Controller.cpp.o -c /Users/tristankalmbach/CLionProjects/Poker/Game/Controller.cpp
+
+CMakeFiles/Poker.dir/Game/Controller.cpp.i: cmake_force
+	@$(CMAKE_COMMAND) -E cmake_echo_color --switch=$(COLOR) --green "Preprocessing CXX source to CMakeFiles/Poker.dir/Game/Controller.cpp.i"
+	/Applications/Xcode.app/Contents/Developer/Toolchains/XcodeDefault.xctoolchain/usr/bin/c++ $(CXX_DEFINES) $(CXX_INCLUDES) $(CXX_FLAGS) -E /Users/tristankalmbach/CLionProjects/Poker/Game/Controller.cpp > CMakeFiles/Poker.dir/Game/Controller.cpp.i
+
+CMakeFiles/Poker.dir/Game/Controller.cpp.s: cmake_force
+	@$(CMAKE_COMMAND) -E cmake_echo_color --switch=$(COLOR) --green "Compiling CXX source to assembly CMakeFiles/Poker.dir/Game/Controller.cpp.s"
+	/Applications/Xcode.app/Contents/Developer/Toolchains/XcodeDefault.xctoolchain/usr/bin/c++ $(CXX_DEFINES) $(CXX_INCLUDES) $(CXX_FLAGS) -S /Users/tristankalmbach/CLionProjects/Poker/Game/Controller.cpp -o CMakeFiles/Poker.dir/Game/Controller.cpp.s
+
+CMakeFiles/Poker.dir/Game/Controller.cpp.o.requires:
+
+.PHONY : CMakeFiles/Poker.dir/Game/Controller.cpp.o.requires
+
+CMakeFiles/Poker.dir/Game/Controller.cpp.o.provides: CMakeFiles/Poker.dir/Game/Controller.cpp.o.requires
+	$(MAKE) -f CMakeFiles/Poker.dir/build.make CMakeFiles/Poker.dir/Game/Controller.cpp.o.provides.build
+.PHONY : CMakeFiles/Poker.dir/Game/Controller.cpp.o.provides
+
+CMakeFiles/Poker.dir/Game/Controller.cpp.o.provides.build: CMakeFiles/Poker.dir/Game/Controller.cpp.o
+
+
 # Object files for target Poker
 Poker_OBJECTS = \
 "CMakeFiles/Poker.dir/main.cpp.o" \
 "CMakeFiles/Poker.dir/Cards/Card.cpp.o" \
 "CMakeFiles/Poker.dir/Cards/Deck.cpp.o" \
-"CMakeFiles/Poker.dir/Cards/Hand.cpp.o" \
-"CMakeFiles/Poker.dir/Game/HandEvaluator.cpp.o"
+"CMakeFiles/Poker.dir/Game/HandEvaluator.cpp.o" \
+"CMakeFiles/Poker.dir/Game/Game.cpp.o" \
+"CMakeFiles/Poker.dir/Game/Player.cpp.o" \
+"CMakeFiles/Poker.dir/Game/Dealer.cpp.o" \
+"CMakeFiles/Poker.dir/Game/Controller.cpp.o"
 
 # External object files for target Poker
 Poker_EXTERNAL_OBJECTS =
@@ -191,11 +266,14 @@ Poker_EXTERNAL_OBJECTS =
 Poker: CMakeFiles/Poker.dir/main.cpp.o
 Poker: CMakeFiles/Poker.dir/Cards/Card.cpp.o
 Poker: CMakeFiles/Poker.dir/Cards/Deck.cpp.o
-Poker: CMakeFiles/Poker.dir/Cards/Hand.cpp.o
 Poker: CMakeFiles/Poker.dir/Game/HandEvaluator.cpp.o
+Poker: CMakeFiles/Poker.dir/Game/Game.cpp.o
+Poker: CMakeFiles/Poker.dir/Game/Player.cpp.o
+Poker: CMakeFiles/Poker.dir/Game/Dealer.cpp.o
+Poker: CMakeFiles/Poker.dir/Game/Controller.cpp.o
 Poker: CMakeFiles/Poker.dir/build.make
 Poker: CMakeFiles/Poker.dir/link.txt
-	@$(CMAKE_COMMAND) -E cmake_echo_color --switch=$(COLOR) --green --bold --progress-dir=/Users/tristankalmbach/CLionProjects/Poker/cmake-build-debug/CMakeFiles --progress-num=$(CMAKE_PROGRESS_6) "Linking CXX executable Poker"
+	@$(CMAKE_COMMAND) -E cmake_echo_color --switch=$(COLOR) --green --bold --progress-dir=/Users/tristankalmbach/CLionProjects/Poker/cmake-build-debug/CMakeFiles --progress-num=$(CMAKE_PROGRESS_9) "Linking CXX executable Poker"
 	$(CMAKE_COMMAND) -E cmake_link_script CMakeFiles/Poker.dir/link.txt --verbose=$(VERBOSE)
 
 # Rule to build all files generated by this target.
@@ -206,8 +284,11 @@ CMakeFiles/Poker.dir/build: Poker
 CMakeFiles/Poker.dir/requires: CMakeFiles/Poker.dir/main.cpp.o.requires
 CMakeFiles/Poker.dir/requires: CMakeFiles/Poker.dir/Cards/Card.cpp.o.requires
 CMakeFiles/Poker.dir/requires: CMakeFiles/Poker.dir/Cards/Deck.cpp.o.requires
-CMakeFiles/Poker.dir/requires: CMakeFiles/Poker.dir/Cards/Hand.cpp.o.requires
 CMakeFiles/Poker.dir/requires: CMakeFiles/Poker.dir/Game/HandEvaluator.cpp.o.requires
+CMakeFiles/Poker.dir/requires: CMakeFiles/Poker.dir/Game/Game.cpp.o.requires
+CMakeFiles/Poker.dir/requires: CMakeFiles/Poker.dir/Game/Player.cpp.o.requires
+CMakeFiles/Poker.dir/requires: CMakeFiles/Poker.dir/Game/Dealer.cpp.o.requires
+CMakeFiles/Poker.dir/requires: CMakeFiles/Poker.dir/Game/Controller.cpp.o.requires
 
 .PHONY : CMakeFiles/Poker.dir/requires
 

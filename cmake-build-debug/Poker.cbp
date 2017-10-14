@@ -93,10 +93,22 @@
 		<Unit filename="/Users/tristankalmbach/CLionProjects/Poker/Cards/Deck.hpp">
 			<Option target="Poker"/>
 		</Unit>
-		<Unit filename="/Users/tristankalmbach/CLionProjects/Poker/Cards/Hand.cpp">
+		<Unit filename="/Users/tristankalmbach/CLionProjects/Poker/Game/Controller.cpp">
 			<Option target="Poker"/>
 		</Unit>
-		<Unit filename="/Users/tristankalmbach/CLionProjects/Poker/Cards/Hand.hpp">
+		<Unit filename="/Users/tristankalmbach/CLionProjects/Poker/Game/Controller.hpp">
+			<Option target="Poker"/>
+		</Unit>
+		<Unit filename="/Users/tristankalmbach/CLionProjects/Poker/Game/Dealer.cpp">
+			<Option target="Poker"/>
+		</Unit>
+		<Unit filename="/Users/tristankalmbach/CLionProjects/Poker/Game/Dealer.hpp">
+			<Option target="Poker"/>
+		</Unit>
+		<Unit filename="/Users/tristankalmbach/CLionProjects/Poker/Game/Game.cpp">
+			<Option target="Poker"/>
+		</Unit>
+		<Unit filename="/Users/tristankalmbach/CLionProjects/Poker/Game/Game.hpp">
 			<Option target="Poker"/>
 		</Unit>
 		<Unit filename="/Users/tristankalmbach/CLionProjects/Poker/Game/HandEvaluator.cpp">
@@ -106,6 +118,12 @@
 			<Option target="Poker"/>
 		</Unit>
 		<Unit filename="/Users/tristankalmbach/CLionProjects/Poker/Game/HandRankings.hpp">
+			<Option target="Poker"/>
+		</Unit>
+		<Unit filename="/Users/tristankalmbach/CLionProjects/Poker/Game/Player.cpp">
+			<Option target="Poker"/>
+		</Unit>
+		<Unit filename="/Users/tristankalmbach/CLionProjects/Poker/Game/Player.hpp">
 			<Option target="Poker"/>
 		</Unit>
 		<Unit filename="/Users/tristankalmbach/CLionProjects/Poker/Testing/Probabilities.hpp">

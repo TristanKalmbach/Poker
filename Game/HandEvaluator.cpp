@@ -4,23 +4,20 @@
 
 #include "HandEvaluator.hpp"
 
-bool HandEvaluator::HasFlush(Hand const &hand)
-{
-	// Create a vector for easy access
-	for (int i = 0; i < HAND_SIZE; ++i)
-	{
-		if (hand[i].getSuit() != hand[0].getSuit())
-			return false;
-	}
+bool HandEvaluator::HasFlush(Hand const &hand) {
+    // Create a vector for easy access
+    for (int i = 0; i < HAND_SIZE; ++i) {
+        if (hand[i].getSuit() != hand[0].getSuit())
+            return false;
+    }
 
     return true;
 }
 
-bool HandEvaluator::HasRoyalFlush(Hand const &hand)
-{
-	// Every card needs to be royal
-	if (!HandEvaluator::IsEveryCardRoyal(hand))
-		return false;
+bool HandEvaluator::HasRoyalFlush(Hand const &hand) {
+    // Every card needs to be royal
+    if (!HandEvaluator::IsEveryCardRoyal(hand))
+        return false;
 
     // Must be a flush
     if (!HandEvaluator::HasFlush(hand))
@@ -33,57 +30,78 @@ bool HandEvaluator::HasRoyalFlush(Hand const &hand)
     return true;
 }
 
-bool HandEvaluator::HasStraight(Hand const &hand)
-{
-	// Check cards
-	auto cardOne = hand[0];
-	auto cardTwo = hand[1];
-	auto cardThree = hand[2];
-	auto cardFour = hand[3];
-	auto cardFive = hand[4];
+bool HandEvaluator::HasStraight(Hand const &hand) {
+    // Check cards
+    std::vector<int> ranks = Deck::GetHandAsInts(hand);
+    auto it = ranks.begin();
 
-	return (cardOne.GetNumericalValueFromRank() + 1) == cardTwo.GetNumericalValueFromRank() &&
-		(cardTwo.GetNumericalValueFromRank() + 1) == cardThree.GetNumericalValueFromRank() &&
-		(cardThree.GetNumericalValueFromRank() + 1) == cardFour.GetNumericalValueFromRank() &&
-		(cardFour.GetNumericalValueFromRank() + 1) == cardFive.GetNumericalValueFromRank();
 }
 
-bool HandEvaluator::HasPair(Hand const &hand)
-{
-    std::vector<CardRank> ranks;
-    for (auto const c : hand)
-        ranks.push_back(c.getRank());
+bool HandEvaluator::HasPair(Hand const &hand) {
+    std::vector<int> ranks = Deck::GetHandAsInts(hand);
 
-	const auto it = std::adjacent_find(ranks.begin(), ranks.end());
+    // Sort so adjacent_find will find it faster.
+    std::sort(ranks.begin(), ranks.end());
+
+    const auto it = repetition_find(ranks.begin(), ranks.end(), 2);
     return it != ranks.end();
 }
 
-bool HandEvaluator::HasStraightFlush(Hand const& hand)
-{
-	return HasFlush(hand) && HasStraight(hand);
+bool HandEvaluator::HasThreeOfKind(Hand const &hand) {
+    std::vector<int> ranks = Deck::GetHandAsInts(hand);
+
+    // Sort so adjacent_find will find it faster.
+    std::sort(ranks.begin(), ranks.end());
+
+    const auto it = repetition_find(ranks.begin(), ranks.end(), 3);
+    return it != ranks.end();
 }
 
-bool HandEvaluator::IsEveryCardRoyal(Hand const& hand)
-{
-	std::size_t numRoyal = 0;
-	for (auto const &c : hand)
-	{
-		if (c.IsCardRoyal())
-			++numRoyal;
-	}
-	
-	return numRoyal == 5;
+bool HandEvaluator::HasFourOfKind(Hand const &hand) {
+    std::vector<int> ranks = Deck::GetHandAsInts(hand);
+
+    // Sort so adjacent_find will find it faster.
+    std::sort(ranks.begin(), ranks.end());
+
+    const auto it = repetition_find(ranks.begin(), ranks.end(), 4);
+    return it != ranks.end();
 }
 
-int HandEvaluator::GetHandRankValue(Hand const& hand)
-{
-	int value = 0;
+bool HandEvaluator::HasTwoPair(Hand const &hand) {
+    if (!HasPair(hand))
+        return false;
 
-	// Get the value of all of the cards
-	for (auto const &c : hand)
-		value += c.GetCardRankValue();
+    // We've gotten here meaning there is already a pair.
+    // So, if we have a sorted vector and the adjacent_find found a pair,
+    // We'll find the next pair if it exists.
 
-	// TODO: Evaluate hand ranks to increase hand value
+    return false;
+}
 
-	return value;
+bool HandEvaluator::HasStraightFlush(Hand const &hand) {
+    return HasFlush(hand) && HasStraight(hand);
+}
+
+bool HandEvaluator::IsEveryCardRoyal(Hand const &hand) {
+    //return std::none_of(hand.begin(), hand.cend(), [&](){
+    //    for (auto const &c : hand)
+    //
+    // });
+}
+
+int HandEvaluator::GetHandRankValue(Hand const &hand) {
+    int value = 0;
+
+    // Get the value of all of the cards
+    for (auto const &c : hand)
+        value += c.GetCardRankValue();
+
+    // TODO: Evaluate hand ranks to increase hand value
+
+    return value;
+}
+
+// TODO: IMPLEMENT THIS WITH STL ALGORITHM PREFERABLY
+bool HandEvaluator::HasFullHouse(Hand const &hand) {
+    return HasThreeOfKind(hand) && HasPair(hand);
 }

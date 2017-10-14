@@ -6,8 +6,11 @@ set(CMAKE_DEPENDS_LANGUAGES
 set(CMAKE_DEPENDS_CHECK_CXX
   "/Users/tristankalmbach/CLionProjects/Poker/Cards/Card.cpp" "/Users/tristankalmbach/CLionProjects/Poker/cmake-build-debug/CMakeFiles/Poker.dir/Cards/Card.cpp.o"
   "/Users/tristankalmbach/CLionProjects/Poker/Cards/Deck.cpp" "/Users/tristankalmbach/CLionProjects/Poker/cmake-build-debug/CMakeFiles/Poker.dir/Cards/Deck.cpp.o"
-  "/Users/tristankalmbach/CLionProjects/Poker/Cards/Hand.cpp" "/Users/tristankalmbach/CLionProjects/Poker/cmake-build-debug/CMakeFiles/Poker.dir/Cards/Hand.cpp.o"
+  "/Users/tristankalmbach/CLionProjects/Poker/Game/Controller.cpp" "/Users/tristankalmbach/CLionProjects/Poker/cmake-build-debug/CMakeFiles/Poker.dir/Game/Controller.cpp.o"
+  "/Users/tristankalmbach/CLionProjects/Poker/Game/Dealer.cpp" "/Users/tristankalmbach/CLionProjects/Poker/cmake-build-debug/CMakeFiles/Poker.dir/Game/Dealer.cpp.o"
+  "/Users/tristankalmbach/CLionProjects/Poker/Game/Game.cpp" "/Users/tristankalmbach/CLionProjects/Poker/cmake-build-debug/CMakeFiles/Poker.dir/Game/Game.cpp.o"
   "/Users/tristankalmbach/CLionProjects/Poker/Game/HandEvaluator.cpp" "/Users/tristankalmbach/CLionProjects/Poker/cmake-build-debug/CMakeFiles/Poker.dir/Game/HandEvaluator.cpp.o"
+  "/Users/tristankalmbach/CLionProjects/Poker/Game/Player.cpp" "/Users/tristankalmbach/CLionProjects/Poker/cmake-build-debug/CMakeFiles/Poker.dir/Game/Player.cpp.o"
   "/Users/tristankalmbach/CLionProjects/Poker/main.cpp" "/Users/tristankalmbach/CLionProjects/Poker/cmake-build-debug/CMakeFiles/Poker.dir/main.cpp.o"
   )
 set(CMAKE_CXX_COMPILER_ID "AppleClang")

@@ -13,19 +13,25 @@
 
 using Hand = std::vector<Card>;
 
-class Deck
-{
+class Deck {
 
 public:
     Deck();
+
     ~Deck() { m_deck.clear(); }
 
     // Main methods
     void FillDeck();
+
     void ShuffleDeck();
+
     Hand CreateHand();
+
+    static std::vector<int> GetHandAsInts(Hand const &hand);
+
     Card GetRandomCardFromDeck();
-	void RemoveCardFromDeck(std::pair<int, int> pair);
+
+    void RemoveCardFromDeck(std::pair<int, int> pair);
 
     // Debugging & Testing methods
     void PrintDeckDetails();

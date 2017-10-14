@@ -177,32 +177,86 @@ Cards/Deck.cpp.s:
 	$(MAKE) -f CMakeFiles/Poker.dir/build.make CMakeFiles/Poker.dir/Cards/Deck.cpp.s
 .PHONY : Cards/Deck.cpp.s
 
-Cards/Hand.o: Cards/Hand.cpp.o
+Game/Controller.o: Game/Controller.cpp.o
 
-.PHONY : Cards/Hand.o
+.PHONY : Game/Controller.o
 
 # target to build an object file
-Cards/Hand.cpp.o:
-	$(MAKE) -f CMakeFiles/Poker.dir/build.make CMakeFiles/Poker.dir/Cards/Hand.cpp.o
-.PHONY : Cards/Hand.cpp.o
+Game/Controller.cpp.o:
+	$(MAKE) -f CMakeFiles/Poker.dir/build.make CMakeFiles/Poker.dir/Game/Controller.cpp.o
+.PHONY : Game/Controller.cpp.o
 
-Cards/Hand.i: Cards/Hand.cpp.i
+Game/Controller.i: Game/Controller.cpp.i
 
-.PHONY : Cards/Hand.i
+.PHONY : Game/Controller.i
 
 # target to preprocess a source file
-Cards/Hand.cpp.i:
-	$(MAKE) -f CMakeFiles/Poker.dir/build.make CMakeFiles/Poker.dir/Cards/Hand.cpp.i
-.PHONY : Cards/Hand.cpp.i
+Game/Controller.cpp.i:
+	$(MAKE) -f CMakeFiles/Poker.dir/build.make CMakeFiles/Poker.dir/Game/Controller.cpp.i
+.PHONY : Game/Controller.cpp.i
 
-Cards/Hand.s: Cards/Hand.cpp.s
+Game/Controller.s: Game/Controller.cpp.s
 
-.PHONY : Cards/Hand.s
+.PHONY : Game/Controller.s
 
 # target to generate assembly for a file
-Cards/Hand.cpp.s:
-	$(MAKE) -f CMakeFiles/Poker.dir/build.make CMakeFiles/Poker.dir/Cards/Hand.cpp.s
-.PHONY : Cards/Hand.cpp.s
+Game/Controller.cpp.s:
+	$(MAKE) -f CMakeFiles/Poker.dir/build.make CMakeFiles/Poker.dir/Game/Controller.cpp.s
+.PHONY : Game/Controller.cpp.s
+
+Game/Dealer.o: Game/Dealer.cpp.o
+
+.PHONY : Game/Dealer.o
+
+# target to build an object file
+Game/Dealer.cpp.o:
+	$(MAKE) -f CMakeFiles/Poker.dir/build.make CMakeFiles/Poker.dir/Game/Dealer.cpp.o
+.PHONY : Game/Dealer.cpp.o
+
+Game/Dealer.i: Game/Dealer.cpp.i
+
+.PHONY : Game/Dealer.i
+
+# target to preprocess a source file
+Game/Dealer.cpp.i:
+	$(MAKE) -f CMakeFiles/Poker.dir/build.make CMakeFiles/Poker.dir/Game/Dealer.cpp.i
+.PHONY : Game/Dealer.cpp.i
+
+Game/Dealer.s: Game/Dealer.cpp.s
+
+.PHONY : Game/Dealer.s
+
+# target to generate assembly for a file
+Game/Dealer.cpp.s:
+	$(MAKE) -f CMakeFiles/Poker.dir/build.make CMakeFiles/Poker.dir/Game/Dealer.cpp.s
+.PHONY : Game/Dealer.cpp.s
+
+Game/Game.o: Game/Game.cpp.o
+
+.PHONY : Game/Game.o
+
+# target to build an object file
+Game/Game.cpp.o:
+	$(MAKE) -f CMakeFiles/Poker.dir/build.make CMakeFiles/Poker.dir/Game/Game.cpp.o
+.PHONY : Game/Game.cpp.o
+
+Game/Game.i: Game/Game.cpp.i
+
+.PHONY : Game/Game.i
+
+# target to preprocess a source file
+Game/Game.cpp.i:
+	$(MAKE) -f CMakeFiles/Poker.dir/build.make CMakeFiles/Poker.dir/Game/Game.cpp.i
+.PHONY : Game/Game.cpp.i
+
+Game/Game.s: Game/Game.cpp.s
+
+.PHONY : Game/Game.s
+
+# target to generate assembly for a file
+Game/Game.cpp.s:
+	$(MAKE) -f CMakeFiles/Poker.dir/build.make CMakeFiles/Poker.dir/Game/Game.cpp.s
+.PHONY : Game/Game.cpp.s
 
 Game/HandEvaluator.o: Game/HandEvaluator.cpp.o
 
@@ -230,6 +284,33 @@ Game/HandEvaluator.s: Game/HandEvaluator.cpp.s
 Game/HandEvaluator.cpp.s:
 	$(MAKE) -f CMakeFiles/Poker.dir/build.make CMakeFiles/Poker.dir/Game/HandEvaluator.cpp.s
 .PHONY : Game/HandEvaluator.cpp.s
+
+Game/Player.o: Game/Player.cpp.o
+
+.PHONY : Game/Player.o
+
+# target to build an object file
+Game/Player.cpp.o:
+	$(MAKE) -f CMakeFiles/Poker.dir/build.make CMakeFiles/Poker.dir/Game/Player.cpp.o
+.PHONY : Game/Player.cpp.o
+
+Game/Player.i: Game/Player.cpp.i
+
+.PHONY : Game/Player.i
+
+# target to preprocess a source file
+Game/Player.cpp.i:
+	$(MAKE) -f CMakeFiles/Poker.dir/build.make CMakeFiles/Poker.dir/Game/Player.cpp.i
+.PHONY : Game/Player.cpp.i
+
+Game/Player.s: Game/Player.cpp.s
+
+.PHONY : Game/Player.s
+
+# target to generate assembly for a file
+Game/Player.cpp.s:
+	$(MAKE) -f CMakeFiles/Poker.dir/build.make CMakeFiles/Poker.dir/Game/Player.cpp.s
+.PHONY : Game/Player.cpp.s
 
 main.o: main.cpp.o
 
@@ -273,12 +354,21 @@ help:
 	@echo "... Cards/Deck.o"
 	@echo "... Cards/Deck.i"
 	@echo "... Cards/Deck.s"
-	@echo "... Cards/Hand.o"
-	@echo "... Cards/Hand.i"
-	@echo "... Cards/Hand.s"
+	@echo "... Game/Controller.o"
+	@echo "... Game/Controller.i"
+	@echo "... Game/Controller.s"
+	@echo "... Game/Dealer.o"
+	@echo "... Game/Dealer.i"
+	@echo "... Game/Dealer.s"
+	@echo "... Game/Game.o"
+	@echo "... Game/Game.i"
+	@echo "... Game/Game.s"
 	@echo "... Game/HandEvaluator.o"
 	@echo "... Game/HandEvaluator.i"
 	@echo "... Game/HandEvaluator.s"
+	@echo "... Game/Player.o"
+	@echo "... Game/Player.i"
+	@echo "... Game/Player.s"
 	@echo "... main.o"
 	@echo "... main.i"
 	@echo "... main.s"

@@ -4,8 +4,7 @@
 
 #pragma once
 
-enum HandRanks
-{
+enum HandRanks {
     None,
     Pair, // Two cards of the same rank.
     TwoPair, // Two different pairs.
