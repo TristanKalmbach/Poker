@@ -9,13 +9,13 @@ void Game::InitializeGame()
 	if (!isInitialized)
 	{
 		// Initialize the deck. This will be the central deck used in the game by both players (or dealer)
-		std::shared_ptr<Deck> l_Deck(new Deck());
+		const auto deck = std::make_shared<Deck>();
 
-		const std::unique_ptr<Player> player(new Player(l_Deck->CreateHand()));
+		const auto player = std::make_unique<Player>(deck->CreateHand());
 		for (auto const& c : player->GetHand())
 			c.PrintCardDetails();
 
-		const std::unique_ptr<Dealer> dealer(new Dealer(l_Deck->CreateHand()));
+		const auto dealer = std::make_unique<Dealer>(deck->CreateHand());
 		for (auto const& c : dealer->GetHand())
 			c.PrintCardDetails();
 

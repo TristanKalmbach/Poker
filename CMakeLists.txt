@@ -22,10 +22,7 @@ set (PROJECT_SOURCE_DEFINITION_DIRECTORY ${PROJECT_SOURCE_DIR}/src)
 
 # Set options used by "CMake".
 set (CMAKE_RUNTIME_OUTPUT_DIRECTORY ${PROJECT_SOURCE_DIR}/bin)
-
-# Detect and add SFML
 set(CMAKE_MODULE_PATH "${CMAKE_SOURCE_DIR}/cmake/macros")
-find_package(SFML 2 REQUIRED COMPONENTS network audio graphics window system)
 
 # Set options used by "FindBoost.cmake".
 # Either specify BOOST_ROOT or BOOST_INCLUDEDIR and BOOST_LIBRARYDIR.
@@ -65,4 +62,4 @@ endif ()
 add_executable (${PROJECT_NAME} ${SOURCES})
 
 # "Link a target to given libraries."
-target_link_libraries (${PROJECT_NAME} ${Boost_LIBRARIES} ${SFML_LIBRARIES} ${SFML_DEPENDENCIES})
+target_link_libraries (${PROJECT_NAME} ${Boost_LIBRARIES})

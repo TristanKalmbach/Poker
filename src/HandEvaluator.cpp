@@ -36,12 +36,20 @@ bool HandEvaluator::HasRoyalFlush(Hand const& hand)
 
 bool HandEvaluator::HasStraight(Hand const& hand)
 {
-	// Check cards
+	// Get the hand as integer values
 	std::vector<int> ranks = Deck::GetHandAsInts(hand);
-	auto it = ranks.begin();
+	
+	// Create an empty vector of the same size
+	std::vector<int> copy(5);
 
+	// Fill the copy vector with incrementing elements based on the starting element of ranks after sorting
+	std::sort(ranks.begin(), ranks.end());
 
-	return false;
+	// Assuming, hypothetically, rank[0] is 5, then we'll increment the starting value by 1 for each reserved element in the new copy vector
+	std::iota(copy.begin(), copy.end(), ranks[0]);
+
+	// In the end, if the vectors are the same, you've got a straight. 
+	return ranks == copy;
 }
 
 bool HandEvaluator::HasPair(Hand const& hand)
