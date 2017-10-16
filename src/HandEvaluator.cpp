@@ -6,6 +6,10 @@
 
 bool HandEvaluator::HasFlush(Hand const& hand)
 {
+	// Can't evaluate an empty hand
+	if (hand.empty() || hand.size() > HAND_SIZE)
+		return false;
+
 	// Create a vector for easy access
 	for (int i = 0; i < HAND_SIZE; ++i)
 	{
@@ -18,6 +22,10 @@ bool HandEvaluator::HasFlush(Hand const& hand)
 
 bool HandEvaluator::HasRoyalFlush(Hand const& hand)
 {
+	// Can't evaluate an empty hand
+	if (hand.empty() || hand.size() > HAND_SIZE)
+		return false;
+
 	// Every card needs to be royal
 	if (!HandEvaluator::IsEveryCardRoyal(hand))
 		return false;
@@ -35,9 +43,13 @@ bool HandEvaluator::HasRoyalFlush(Hand const& hand)
 
 bool HandEvaluator::HasStraight(Hand const& hand)
 {
+	// Can't evaluate an empty hand
+	if (hand.empty() || hand.size() > HAND_SIZE)
+		return false;
+
 	// Get the hand as integer values
-	std::vector<int> ranks = Deck::GetHandAsInts(hand);
-	
+	auto ranks = Deck::GetHandAsInts(hand);
+
 	// Create an empty vector of the same size
 	std::vector<int> copy(5);
 
@@ -53,7 +65,11 @@ bool HandEvaluator::HasStraight(Hand const& hand)
 
 bool HandEvaluator::HasPair(Hand const& hand)
 {
-	std::vector<int> ranks = Deck::GetHandAsInts(hand);
+	// Can't evaluate an empty hand
+	if (hand.empty() || hand.size() > HAND_SIZE)
+		return false;
+
+	auto ranks = Deck::GetHandAsInts(hand);
 
 	// Sort so adjacent_find will find it faster.
 	std::sort(ranks.begin(), ranks.end());
@@ -64,6 +80,10 @@ bool HandEvaluator::HasPair(Hand const& hand)
 
 bool HandEvaluator::HasThreeOfKind(Hand const& hand)
 {
+	// Can't evaluate an empty hand
+	if (hand.empty() || hand.size() > HAND_SIZE)
+		return false;
+
 	std::vector<int> ranks = Deck::GetHandAsInts(hand);
 
 	// Sort so adjacent_find will find it faster.
@@ -75,6 +95,10 @@ bool HandEvaluator::HasThreeOfKind(Hand const& hand)
 
 bool HandEvaluator::HasFourOfKind(Hand const& hand)
 {
+	// Can't evaluate an empty hand
+	if (hand.empty() || hand.size() > HAND_SIZE)
+		return false;
+
 	std::vector<int> ranks = Deck::GetHandAsInts(hand);
 
 	// Sort so adjacent_find will find it faster.
@@ -86,10 +110,14 @@ bool HandEvaluator::HasFourOfKind(Hand const& hand)
 
 bool HandEvaluator::HasTwoPair(Hand const& hand)
 {
-    std::vector<int> ranks = Deck::GetHandAsInts(hand);
+	// Can't evaluate an empty hand
+	if (hand.empty() || hand.size() > HAND_SIZE)
+		return false;
 
-    // Sort. In theory now we'll have two sets of pairs
-    std::sort(ranks.begin(), ranks.end());
+	auto ranks = Deck::GetHandAsInts(hand);
+
+	// Sort. In theory now we'll have two sets of pairs
+	std::sort(ranks.begin(), ranks.end());
 
 	const auto it = HandEvaluator::repetition_find(ranks.begin(), ranks.end(), 2);
 
@@ -102,22 +130,34 @@ bool HandEvaluator::HasTwoPair(Hand const& hand)
 
 bool HandEvaluator::HasStraightFlush(Hand const& hand)
 {
+	// Can't evaluate an empty hand
+	if (hand.empty() || hand.size() > HAND_SIZE)
+		return false;
+
 	return HasFlush(hand) && HasStraight(hand);
 }
 
 // O(N)
 bool HandEvaluator::IsEveryCardRoyal(Hand const& hand)
 {
-	std::vector<int> ranks = Deck::GetHandAsInts(hand);
+	// Can't evaluate an empty hand
+	if (hand.empty() || hand.size() > HAND_SIZE)
+		return false;
+
+	auto ranks = Deck::GetHandAsInts(hand);
 
 	return std::all_of(ranks.begin(), ranks.end(), [](int r)
-                                {
-	                                return r >= 10;
-                                });
+                   {
+	                   return r >= 10;
+                   });
 }
 
 int HandEvaluator::GetHandRankValue(Hand const& hand)
 {
+	// Can't evaluate an empty hand
+	if (hand.empty() || hand.size() > HAND_SIZE)
+		return false;
+
 	int value = 0;
 
 	// Get the value of all of the cards
@@ -131,9 +171,13 @@ int HandEvaluator::GetHandRankValue(Hand const& hand)
 
 bool HandEvaluator::HasFullHouse(Hand const& hand)
 {
+	// Can't evaluate an empty hand
+	if (hand.empty() || hand.size() > HAND_SIZE)
+		return false;
+
 	// Find three repeating elements and then two separate repeating elements that do not equal the first three. 
 	// Order does not matter so sort is unnecessary, BUT we'll do it for simplicitys sake.
-	std::vector<int> ranks = Deck::GetHandAsInts(hand);
+	auto ranks = Deck::GetHandAsInts(hand);
 
 	// Sort. In theory now we'll have xxyyy || xxxyy in terms of pair/triple
 	std::sort(ranks.begin(), ranks.end());
