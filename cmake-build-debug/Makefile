@@ -123,221 +123,221 @@ Poker/fast:
 	$(MAKE) -f CMakeFiles/Poker.dir/build.make CMakeFiles/Poker.dir/build
 .PHONY : Poker/fast
 
-Cards/Card.o: Cards/Card.cpp.o
+src/Card.o: src/Card.cpp.o
 
-.PHONY : Cards/Card.o
-
-# target to build an object file
-Cards/Card.cpp.o:
-	$(MAKE) -f CMakeFiles/Poker.dir/build.make CMakeFiles/Poker.dir/Cards/Card.cpp.o
-.PHONY : Cards/Card.cpp.o
-
-Cards/Card.i: Cards/Card.cpp.i
-
-.PHONY : Cards/Card.i
-
-# target to preprocess a source file
-Cards/Card.cpp.i:
-	$(MAKE) -f CMakeFiles/Poker.dir/build.make CMakeFiles/Poker.dir/Cards/Card.cpp.i
-.PHONY : Cards/Card.cpp.i
-
-Cards/Card.s: Cards/Card.cpp.s
-
-.PHONY : Cards/Card.s
-
-# target to generate assembly for a file
-Cards/Card.cpp.s:
-	$(MAKE) -f CMakeFiles/Poker.dir/build.make CMakeFiles/Poker.dir/Cards/Card.cpp.s
-.PHONY : Cards/Card.cpp.s
-
-Cards/Deck.o: Cards/Deck.cpp.o
-
-.PHONY : Cards/Deck.o
+.PHONY : src/Card.o
 
 # target to build an object file
-Cards/Deck.cpp.o:
-	$(MAKE) -f CMakeFiles/Poker.dir/build.make CMakeFiles/Poker.dir/Cards/Deck.cpp.o
-.PHONY : Cards/Deck.cpp.o
+src/Card.cpp.o:
+	$(MAKE) -f CMakeFiles/Poker.dir/build.make CMakeFiles/Poker.dir/src/Card.cpp.o
+.PHONY : src/Card.cpp.o
 
-Cards/Deck.i: Cards/Deck.cpp.i
+src/Card.i: src/Card.cpp.i
 
-.PHONY : Cards/Deck.i
+.PHONY : src/Card.i
 
 # target to preprocess a source file
-Cards/Deck.cpp.i:
-	$(MAKE) -f CMakeFiles/Poker.dir/build.make CMakeFiles/Poker.dir/Cards/Deck.cpp.i
-.PHONY : Cards/Deck.cpp.i
+src/Card.cpp.i:
+	$(MAKE) -f CMakeFiles/Poker.dir/build.make CMakeFiles/Poker.dir/src/Card.cpp.i
+.PHONY : src/Card.cpp.i
 
-Cards/Deck.s: Cards/Deck.cpp.s
+src/Card.s: src/Card.cpp.s
 
-.PHONY : Cards/Deck.s
+.PHONY : src/Card.s
 
 # target to generate assembly for a file
-Cards/Deck.cpp.s:
-	$(MAKE) -f CMakeFiles/Poker.dir/build.make CMakeFiles/Poker.dir/Cards/Deck.cpp.s
-.PHONY : Cards/Deck.cpp.s
+src/Card.cpp.s:
+	$(MAKE) -f CMakeFiles/Poker.dir/build.make CMakeFiles/Poker.dir/src/Card.cpp.s
+.PHONY : src/Card.cpp.s
 
-Game/Controller.o: Game/Controller.cpp.o
+src/Controller.o: src/Controller.cpp.o
 
-.PHONY : Game/Controller.o
+.PHONY : src/Controller.o
 
 # target to build an object file
-Game/Controller.cpp.o:
-	$(MAKE) -f CMakeFiles/Poker.dir/build.make CMakeFiles/Poker.dir/Game/Controller.cpp.o
-.PHONY : Game/Controller.cpp.o
+src/Controller.cpp.o:
+	$(MAKE) -f CMakeFiles/Poker.dir/build.make CMakeFiles/Poker.dir/src/Controller.cpp.o
+.PHONY : src/Controller.cpp.o
 
-Game/Controller.i: Game/Controller.cpp.i
+src/Controller.i: src/Controller.cpp.i
 
-.PHONY : Game/Controller.i
+.PHONY : src/Controller.i
 
 # target to preprocess a source file
-Game/Controller.cpp.i:
-	$(MAKE) -f CMakeFiles/Poker.dir/build.make CMakeFiles/Poker.dir/Game/Controller.cpp.i
-.PHONY : Game/Controller.cpp.i
+src/Controller.cpp.i:
+	$(MAKE) -f CMakeFiles/Poker.dir/build.make CMakeFiles/Poker.dir/src/Controller.cpp.i
+.PHONY : src/Controller.cpp.i
 
-Game/Controller.s: Game/Controller.cpp.s
+src/Controller.s: src/Controller.cpp.s
 
-.PHONY : Game/Controller.s
+.PHONY : src/Controller.s
 
 # target to generate assembly for a file
-Game/Controller.cpp.s:
-	$(MAKE) -f CMakeFiles/Poker.dir/build.make CMakeFiles/Poker.dir/Game/Controller.cpp.s
-.PHONY : Game/Controller.cpp.s
+src/Controller.cpp.s:
+	$(MAKE) -f CMakeFiles/Poker.dir/build.make CMakeFiles/Poker.dir/src/Controller.cpp.s
+.PHONY : src/Controller.cpp.s
 
-Game/Dealer.o: Game/Dealer.cpp.o
+src/Dealer.o: src/Dealer.cpp.o
 
-.PHONY : Game/Dealer.o
+.PHONY : src/Dealer.o
 
 # target to build an object file
-Game/Dealer.cpp.o:
-	$(MAKE) -f CMakeFiles/Poker.dir/build.make CMakeFiles/Poker.dir/Game/Dealer.cpp.o
-.PHONY : Game/Dealer.cpp.o
+src/Dealer.cpp.o:
+	$(MAKE) -f CMakeFiles/Poker.dir/build.make CMakeFiles/Poker.dir/src/Dealer.cpp.o
+.PHONY : src/Dealer.cpp.o
 
-Game/Dealer.i: Game/Dealer.cpp.i
+src/Dealer.i: src/Dealer.cpp.i
 
-.PHONY : Game/Dealer.i
+.PHONY : src/Dealer.i
 
 # target to preprocess a source file
-Game/Dealer.cpp.i:
-	$(MAKE) -f CMakeFiles/Poker.dir/build.make CMakeFiles/Poker.dir/Game/Dealer.cpp.i
-.PHONY : Game/Dealer.cpp.i
+src/Dealer.cpp.i:
+	$(MAKE) -f CMakeFiles/Poker.dir/build.make CMakeFiles/Poker.dir/src/Dealer.cpp.i
+.PHONY : src/Dealer.cpp.i
 
-Game/Dealer.s: Game/Dealer.cpp.s
+src/Dealer.s: src/Dealer.cpp.s
 
-.PHONY : Game/Dealer.s
+.PHONY : src/Dealer.s
 
 # target to generate assembly for a file
-Game/Dealer.cpp.s:
-	$(MAKE) -f CMakeFiles/Poker.dir/build.make CMakeFiles/Poker.dir/Game/Dealer.cpp.s
-.PHONY : Game/Dealer.cpp.s
+src/Dealer.cpp.s:
+	$(MAKE) -f CMakeFiles/Poker.dir/build.make CMakeFiles/Poker.dir/src/Dealer.cpp.s
+.PHONY : src/Dealer.cpp.s
 
-Game/Game.o: Game/Game.cpp.o
+src/Deck.o: src/Deck.cpp.o
 
-.PHONY : Game/Game.o
+.PHONY : src/Deck.o
 
 # target to build an object file
-Game/Game.cpp.o:
-	$(MAKE) -f CMakeFiles/Poker.dir/build.make CMakeFiles/Poker.dir/Game/Game.cpp.o
-.PHONY : Game/Game.cpp.o
+src/Deck.cpp.o:
+	$(MAKE) -f CMakeFiles/Poker.dir/build.make CMakeFiles/Poker.dir/src/Deck.cpp.o
+.PHONY : src/Deck.cpp.o
 
-Game/Game.i: Game/Game.cpp.i
+src/Deck.i: src/Deck.cpp.i
 
-.PHONY : Game/Game.i
+.PHONY : src/Deck.i
 
 # target to preprocess a source file
-Game/Game.cpp.i:
-	$(MAKE) -f CMakeFiles/Poker.dir/build.make CMakeFiles/Poker.dir/Game/Game.cpp.i
-.PHONY : Game/Game.cpp.i
+src/Deck.cpp.i:
+	$(MAKE) -f CMakeFiles/Poker.dir/build.make CMakeFiles/Poker.dir/src/Deck.cpp.i
+.PHONY : src/Deck.cpp.i
 
-Game/Game.s: Game/Game.cpp.s
+src/Deck.s: src/Deck.cpp.s
 
-.PHONY : Game/Game.s
+.PHONY : src/Deck.s
 
 # target to generate assembly for a file
-Game/Game.cpp.s:
-	$(MAKE) -f CMakeFiles/Poker.dir/build.make CMakeFiles/Poker.dir/Game/Game.cpp.s
-.PHONY : Game/Game.cpp.s
+src/Deck.cpp.s:
+	$(MAKE) -f CMakeFiles/Poker.dir/build.make CMakeFiles/Poker.dir/src/Deck.cpp.s
+.PHONY : src/Deck.cpp.s
 
-Game/HandEvaluator.o: Game/HandEvaluator.cpp.o
+src/Game.o: src/Game.cpp.o
 
-.PHONY : Game/HandEvaluator.o
+.PHONY : src/Game.o
 
 # target to build an object file
-Game/HandEvaluator.cpp.o:
-	$(MAKE) -f CMakeFiles/Poker.dir/build.make CMakeFiles/Poker.dir/Game/HandEvaluator.cpp.o
-.PHONY : Game/HandEvaluator.cpp.o
+src/Game.cpp.o:
+	$(MAKE) -f CMakeFiles/Poker.dir/build.make CMakeFiles/Poker.dir/src/Game.cpp.o
+.PHONY : src/Game.cpp.o
 
-Game/HandEvaluator.i: Game/HandEvaluator.cpp.i
+src/Game.i: src/Game.cpp.i
 
-.PHONY : Game/HandEvaluator.i
+.PHONY : src/Game.i
 
 # target to preprocess a source file
-Game/HandEvaluator.cpp.i:
-	$(MAKE) -f CMakeFiles/Poker.dir/build.make CMakeFiles/Poker.dir/Game/HandEvaluator.cpp.i
-.PHONY : Game/HandEvaluator.cpp.i
+src/Game.cpp.i:
+	$(MAKE) -f CMakeFiles/Poker.dir/build.make CMakeFiles/Poker.dir/src/Game.cpp.i
+.PHONY : src/Game.cpp.i
 
-Game/HandEvaluator.s: Game/HandEvaluator.cpp.s
+src/Game.s: src/Game.cpp.s
 
-.PHONY : Game/HandEvaluator.s
+.PHONY : src/Game.s
 
 # target to generate assembly for a file
-Game/HandEvaluator.cpp.s:
-	$(MAKE) -f CMakeFiles/Poker.dir/build.make CMakeFiles/Poker.dir/Game/HandEvaluator.cpp.s
-.PHONY : Game/HandEvaluator.cpp.s
+src/Game.cpp.s:
+	$(MAKE) -f CMakeFiles/Poker.dir/build.make CMakeFiles/Poker.dir/src/Game.cpp.s
+.PHONY : src/Game.cpp.s
 
-Game/Player.o: Game/Player.cpp.o
+src/HandEvaluator.o: src/HandEvaluator.cpp.o
 
-.PHONY : Game/Player.o
+.PHONY : src/HandEvaluator.o
 
 # target to build an object file
-Game/Player.cpp.o:
-	$(MAKE) -f CMakeFiles/Poker.dir/build.make CMakeFiles/Poker.dir/Game/Player.cpp.o
-.PHONY : Game/Player.cpp.o
+src/HandEvaluator.cpp.o:
+	$(MAKE) -f CMakeFiles/Poker.dir/build.make CMakeFiles/Poker.dir/src/HandEvaluator.cpp.o
+.PHONY : src/HandEvaluator.cpp.o
 
-Game/Player.i: Game/Player.cpp.i
+src/HandEvaluator.i: src/HandEvaluator.cpp.i
 
-.PHONY : Game/Player.i
+.PHONY : src/HandEvaluator.i
 
 # target to preprocess a source file
-Game/Player.cpp.i:
-	$(MAKE) -f CMakeFiles/Poker.dir/build.make CMakeFiles/Poker.dir/Game/Player.cpp.i
-.PHONY : Game/Player.cpp.i
+src/HandEvaluator.cpp.i:
+	$(MAKE) -f CMakeFiles/Poker.dir/build.make CMakeFiles/Poker.dir/src/HandEvaluator.cpp.i
+.PHONY : src/HandEvaluator.cpp.i
 
-Game/Player.s: Game/Player.cpp.s
+src/HandEvaluator.s: src/HandEvaluator.cpp.s
 
-.PHONY : Game/Player.s
+.PHONY : src/HandEvaluator.s
 
 # target to generate assembly for a file
-Game/Player.cpp.s:
-	$(MAKE) -f CMakeFiles/Poker.dir/build.make CMakeFiles/Poker.dir/Game/Player.cpp.s
-.PHONY : Game/Player.cpp.s
+src/HandEvaluator.cpp.s:
+	$(MAKE) -f CMakeFiles/Poker.dir/build.make CMakeFiles/Poker.dir/src/HandEvaluator.cpp.s
+.PHONY : src/HandEvaluator.cpp.s
 
-main.o: main.cpp.o
+src/Player.o: src/Player.cpp.o
 
-.PHONY : main.o
+.PHONY : src/Player.o
 
 # target to build an object file
-main.cpp.o:
-	$(MAKE) -f CMakeFiles/Poker.dir/build.make CMakeFiles/Poker.dir/main.cpp.o
-.PHONY : main.cpp.o
+src/Player.cpp.o:
+	$(MAKE) -f CMakeFiles/Poker.dir/build.make CMakeFiles/Poker.dir/src/Player.cpp.o
+.PHONY : src/Player.cpp.o
 
-main.i: main.cpp.i
+src/Player.i: src/Player.cpp.i
 
-.PHONY : main.i
+.PHONY : src/Player.i
 
 # target to preprocess a source file
-main.cpp.i:
-	$(MAKE) -f CMakeFiles/Poker.dir/build.make CMakeFiles/Poker.dir/main.cpp.i
-.PHONY : main.cpp.i
+src/Player.cpp.i:
+	$(MAKE) -f CMakeFiles/Poker.dir/build.make CMakeFiles/Poker.dir/src/Player.cpp.i
+.PHONY : src/Player.cpp.i
 
-main.s: main.cpp.s
+src/Player.s: src/Player.cpp.s
 
-.PHONY : main.s
+.PHONY : src/Player.s
 
 # target to generate assembly for a file
-main.cpp.s:
-	$(MAKE) -f CMakeFiles/Poker.dir/build.make CMakeFiles/Poker.dir/main.cpp.s
-.PHONY : main.cpp.s
+src/Player.cpp.s:
+	$(MAKE) -f CMakeFiles/Poker.dir/build.make CMakeFiles/Poker.dir/src/Player.cpp.s
+.PHONY : src/Player.cpp.s
+
+src/main.o: src/main.cpp.o
+
+.PHONY : src/main.o
+
+# target to build an object file
+src/main.cpp.o:
+	$(MAKE) -f CMakeFiles/Poker.dir/build.make CMakeFiles/Poker.dir/src/main.cpp.o
+.PHONY : src/main.cpp.o
+
+src/main.i: src/main.cpp.i
+
+.PHONY : src/main.i
+
+# target to preprocess a source file
+src/main.cpp.i:
+	$(MAKE) -f CMakeFiles/Poker.dir/build.make CMakeFiles/Poker.dir/src/main.cpp.i
+.PHONY : src/main.cpp.i
+
+src/main.s: src/main.cpp.s
+
+.PHONY : src/main.s
+
+# target to generate assembly for a file
+src/main.cpp.s:
+	$(MAKE) -f CMakeFiles/Poker.dir/build.make CMakeFiles/Poker.dir/src/main.cpp.s
+.PHONY : src/main.cpp.s
 
 # Help Target
 help:
@@ -348,30 +348,30 @@ help:
 	@echo "... rebuild_cache"
 	@echo "... edit_cache"
 	@echo "... Poker"
-	@echo "... Cards/Card.o"
-	@echo "... Cards/Card.i"
-	@echo "... Cards/Card.s"
-	@echo "... Cards/Deck.o"
-	@echo "... Cards/Deck.i"
-	@echo "... Cards/Deck.s"
-	@echo "... Game/Controller.o"
-	@echo "... Game/Controller.i"
-	@echo "... Game/Controller.s"
-	@echo "... Game/Dealer.o"
-	@echo "... Game/Dealer.i"
-	@echo "... Game/Dealer.s"
-	@echo "... Game/Game.o"
-	@echo "... Game/Game.i"
-	@echo "... Game/Game.s"
-	@echo "... Game/HandEvaluator.o"
-	@echo "... Game/HandEvaluator.i"
-	@echo "... Game/HandEvaluator.s"
-	@echo "... Game/Player.o"
-	@echo "... Game/Player.i"
-	@echo "... Game/Player.s"
-	@echo "... main.o"
-	@echo "... main.i"
-	@echo "... main.s"
+	@echo "... src/Card.o"
+	@echo "... src/Card.i"
+	@echo "... src/Card.s"
+	@echo "... src/Controller.o"
+	@echo "... src/Controller.i"
+	@echo "... src/Controller.s"
+	@echo "... src/Dealer.o"
+	@echo "... src/Dealer.i"
+	@echo "... src/Dealer.s"
+	@echo "... src/Deck.o"
+	@echo "... src/Deck.i"
+	@echo "... src/Deck.s"
+	@echo "... src/Game.o"
+	@echo "... src/Game.i"
+	@echo "... src/Game.s"
+	@echo "... src/HandEvaluator.o"
+	@echo "... src/HandEvaluator.i"
+	@echo "... src/HandEvaluator.s"
+	@echo "... src/Player.o"
+	@echo "... src/Player.i"
+	@echo "... src/Player.s"
+	@echo "... src/main.o"
+	@echo "... src/main.i"
+	@echo "... src/main.s"
 .PHONY : help
 
 

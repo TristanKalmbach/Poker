@@ -38,12 +38,13 @@
 				</MakeCommands>
 			</Target>
 			<Target title="Poker">
-				<Option output="/Users/tristankalmbach/CLionProjects/Poker/cmake-build-debug/Poker" prefix_auto="0" extension_auto="0"/>
-				<Option working_dir="/Users/tristankalmbach/CLionProjects/Poker/cmake-build-debug"/>
+				<Option output="/Users/tristankalmbach/CLionProjects/Poker/bin/Poker" prefix_auto="0" extension_auto="0"/>
+				<Option working_dir="/Users/tristankalmbach/CLionProjects/Poker/bin"/>
 				<Option object_output="./"/>
 				<Option type="1"/>
 				<Option compiler="gcc"/>
 				<Compiler>
+					<Add directory="/Users/tristankalmbach/CLionProjects/Poker/cmake-build-debug"/>
 					<Add directory="/Applications/Xcode.app/Contents/Developer/Toolchains/XcodeDefault.xctoolchain/usr/include/c++/v1"/>
 					<Add directory="/Applications/Xcode.app/Contents/Developer/Toolchains/XcodeDefault.xctoolchain/usr/lib/clang/9.0.0/include"/>
 					<Add directory="/Applications/Xcode.app/Contents/Developer/Toolchains/XcodeDefault.xctoolchain/usr/include"/>
@@ -58,12 +59,13 @@
 				</MakeCommands>
 			</Target>
 			<Target title="Poker/fast">
-				<Option output="/Users/tristankalmbach/CLionProjects/Poker/cmake-build-debug/Poker" prefix_auto="0" extension_auto="0"/>
-				<Option working_dir="/Users/tristankalmbach/CLionProjects/Poker/cmake-build-debug"/>
+				<Option output="/Users/tristankalmbach/CLionProjects/Poker/bin/Poker" prefix_auto="0" extension_auto="0"/>
+				<Option working_dir="/Users/tristankalmbach/CLionProjects/Poker/bin"/>
 				<Option object_output="./"/>
 				<Option type="1"/>
 				<Option compiler="gcc"/>
 				<Compiler>
+					<Add directory="/Users/tristankalmbach/CLionProjects/Poker/cmake-build-debug"/>
 					<Add directory="/Applications/Xcode.app/Contents/Developer/Toolchains/XcodeDefault.xctoolchain/usr/include/c++/v1"/>
 					<Add directory="/Applications/Xcode.app/Contents/Developer/Toolchains/XcodeDefault.xctoolchain/usr/lib/clang/9.0.0/include"/>
 					<Add directory="/Applications/Xcode.app/Contents/Developer/Toolchains/XcodeDefault.xctoolchain/usr/include"/>
@@ -78,61 +80,64 @@
 				</MakeCommands>
 			</Target>
 		</Build>
-		<Unit filename="/Users/tristankalmbach/CLionProjects/Poker/Cards/Card.cpp">
+		<Unit filename="/Users/tristankalmbach/CLionProjects/Poker/src/Card.cpp">
 			<Option target="Poker"/>
 		</Unit>
-		<Unit filename="/Users/tristankalmbach/CLionProjects/Poker/Cards/Card.hpp">
+		<Unit filename="/Users/tristankalmbach/CLionProjects/Poker/src/Card.hpp">
 			<Option target="Poker"/>
 		</Unit>
-		<Unit filename="/Users/tristankalmbach/CLionProjects/Poker/Cards/CardProperties.hpp">
+		<Unit filename="/Users/tristankalmbach/CLionProjects/Poker/src/CardProperties.hpp">
 			<Option target="Poker"/>
 		</Unit>
-		<Unit filename="/Users/tristankalmbach/CLionProjects/Poker/Cards/Deck.cpp">
+		<Unit filename="/Users/tristankalmbach/CLionProjects/Poker/src/Controller.cpp">
 			<Option target="Poker"/>
 		</Unit>
-		<Unit filename="/Users/tristankalmbach/CLionProjects/Poker/Cards/Deck.hpp">
+		<Unit filename="/Users/tristankalmbach/CLionProjects/Poker/src/Controller.hpp">
 			<Option target="Poker"/>
 		</Unit>
-		<Unit filename="/Users/tristankalmbach/CLionProjects/Poker/Game/Controller.cpp">
+		<Unit filename="/Users/tristankalmbach/CLionProjects/Poker/src/Dealer.cpp">
 			<Option target="Poker"/>
 		</Unit>
-		<Unit filename="/Users/tristankalmbach/CLionProjects/Poker/Game/Controller.hpp">
+		<Unit filename="/Users/tristankalmbach/CLionProjects/Poker/src/Dealer.hpp">
 			<Option target="Poker"/>
 		</Unit>
-		<Unit filename="/Users/tristankalmbach/CLionProjects/Poker/Game/Dealer.cpp">
+		<Unit filename="/Users/tristankalmbach/CLionProjects/Poker/src/Deck.cpp">
 			<Option target="Poker"/>
 		</Unit>
-		<Unit filename="/Users/tristankalmbach/CLionProjects/Poker/Game/Dealer.hpp">
+		<Unit filename="/Users/tristankalmbach/CLionProjects/Poker/src/Deck.hpp">
 			<Option target="Poker"/>
 		</Unit>
-		<Unit filename="/Users/tristankalmbach/CLionProjects/Poker/Game/Game.cpp">
+		<Unit filename="/Users/tristankalmbach/CLionProjects/Poker/src/Game.cpp">
 			<Option target="Poker"/>
 		</Unit>
-		<Unit filename="/Users/tristankalmbach/CLionProjects/Poker/Game/Game.hpp">
+		<Unit filename="/Users/tristankalmbach/CLionProjects/Poker/src/Game.hpp">
 			<Option target="Poker"/>
 		</Unit>
-		<Unit filename="/Users/tristankalmbach/CLionProjects/Poker/Game/HandEvaluator.cpp">
+		<Unit filename="/Users/tristankalmbach/CLionProjects/Poker/src/HandEvaluator.cpp">
 			<Option target="Poker"/>
 		</Unit>
-		<Unit filename="/Users/tristankalmbach/CLionProjects/Poker/Game/HandEvaluator.hpp">
+		<Unit filename="/Users/tristankalmbach/CLionProjects/Poker/src/HandEvaluator.hpp">
 			<Option target="Poker"/>
 		</Unit>
-		<Unit filename="/Users/tristankalmbach/CLionProjects/Poker/Game/HandRankings.hpp">
+		<Unit filename="/Users/tristankalmbach/CLionProjects/Poker/src/HandRankings.hpp">
 			<Option target="Poker"/>
 		</Unit>
-		<Unit filename="/Users/tristankalmbach/CLionProjects/Poker/Game/Player.cpp">
+		<Unit filename="/Users/tristankalmbach/CLionProjects/Poker/src/Player.cpp">
 			<Option target="Poker"/>
 		</Unit>
-		<Unit filename="/Users/tristankalmbach/CLionProjects/Poker/Game/Player.hpp">
+		<Unit filename="/Users/tristankalmbach/CLionProjects/Poker/src/Player.hpp">
 			<Option target="Poker"/>
 		</Unit>
-		<Unit filename="/Users/tristankalmbach/CLionProjects/Poker/Testing/Probabilities.hpp">
+		<Unit filename="/Users/tristankalmbach/CLionProjects/Poker/src/Probabilities.hpp">
 			<Option target="Poker"/>
 		</Unit>
-		<Unit filename="/Users/tristankalmbach/CLionProjects/Poker/main.cpp">
+		<Unit filename="/Users/tristankalmbach/CLionProjects/Poker/src/main.cpp">
 			<Option target="Poker"/>
 		</Unit>
 		<Unit filename="/Users/tristankalmbach/CLionProjects/Poker/CMakeLists.txt">
+			<Option virtualFolder="CMake Files\"/>
+		</Unit>
+		<Unit filename="/Users/tristankalmbach/CLionProjects/Poker/config.h.in">
 			<Option virtualFolder="CMake Files\"/>
 		</Unit>
 	</Project>

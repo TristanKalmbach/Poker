@@ -7,7 +7,7 @@
 
 int main()
 {
-	Testing::Probabilities::GetProbabilitiesOfHandConditions(HandRanks::Straight, 1);
+	Testing::Probabilities::GetProbabilitiesOfHandConditions(HandRanks::FullHouse, 1);
 
 	system("pause");
 	return 0;

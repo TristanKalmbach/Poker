@@ -86,14 +86,18 @@ bool HandEvaluator::HasFourOfKind(Hand const& hand)
 
 bool HandEvaluator::HasTwoPair(Hand const& hand)
 {
-	if (!HasPair(hand))
-		return false;
+    std::vector<int> ranks = Deck::GetHandAsInts(hand);
 
-	// We've gotten here meaning there is already a pair.
-	// So, if we have a sorted vector and the adjacent_find found a pair,
-	// We'll find the next pair if it exists.
+    // Sort. In theory now we'll have two sets of pairs
+    std::sort(ranks.begin(), ranks.end());
 
-	return false;
+	const auto it = HandEvaluator::repetition_find(ranks.begin(), ranks.end(), 2);
+
+	// Find a triple
+	const auto it2 = HandEvaluator::repetition_find(ranks.begin(), ranks.end(), 2);
+
+	// If the value of the iterators are NOT equal, yet they're found, then we have a xxyyy/xxxyy situation.
+	return (it != it2) && (it != ranks.end() && it2 != ranks.end());
 }
 
 bool HandEvaluator::HasStraightFlush(Hand const& hand)
