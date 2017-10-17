@@ -31,5 +31,10 @@
 *.out
 *.app
 
-# Directories
-cmake-build-debug/*.
+# Build dir
+build*
+debug_build
+release_build
+/bin
+/lib
+/install

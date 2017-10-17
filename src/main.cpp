@@ -1,9 +1,6 @@
-#include "Card.hpp"
-#include "Deck.hpp"
-#include "Probabilities.hpp"
+#include "Game/Utility/HandRankings.hpp";
+#include "Game/Utility/Probabilities.hpp"
 
-#include <thread>
-#include "Game.hpp"
 
 int main()
 {
