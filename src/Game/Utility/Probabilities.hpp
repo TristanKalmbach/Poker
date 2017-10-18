@@ -20,7 +20,7 @@ namespace Testing
 		{
 			// Create a deck and hand
 			const auto deck = std::make_shared<Deck>();
-			std::vector<Card> cards;
+		    auto cards = std::vector<Card>();
 
 			int numRuns = 0;
 			int outcomes = 0;
