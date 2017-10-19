@@ -8,63 +8,54 @@
 
 const std::vector<CardSuits> Suits = {CardSuits::Club, CardSuits::Diamond, CardSuits::Heart, CardSuits::Spade};
 const std::vector<CardRank> Ranks = {
-	CardRank::Ace, CardRank::Two, CardRank::Three, CardRank::Four,
-	CardRank::Five, CardRank::Six, CardRank::Seven, CardRank::Eight,
-	CardRank::Nine, CardRank::Ten, CardRank::Jack, CardRank::Queen,
-	CardRank::King
+    CardRank::Ace, CardRank::Two, CardRank::Three, CardRank::Four,
+    CardRank::Five, CardRank::Six, CardRank::Seven, CardRank::Eight,
+    CardRank::Nine, CardRank::Ten, CardRank::Jack, CardRank::Queen,
+    CardRank::King
 };
 
 enum CardFlags
 {
-	FLAG_NONE = 0x0,
-	FLAG_CARD_DRAWN = 0x1,
-	FLAG_CARD_REMOVED = 0x2
+    FLAG_NONE = 0x0,
+    FLAG_CARD_DRAWN = 0x1,
+    FLAG_CARD_REMOVED = 0x2
 };
 
 class Card
 {
 public:
-	// Every card has a suit and a value
-	Card() : m_flags()
-	{
-	}
+    // Every card has a suit and a value
+    Card() : m_flags()
+    {
+    }
 
-	explicit Card(const std::pair<CardSuits, CardRank> card) : m_flags(FLAG_NONE)
-	{
-		m_cardDetails = card;
-	}
+    explicit Card(const std::pair<CardSuits, CardRank> card) : m_flags(FLAG_NONE)
+    {
+        m_cardDetails = card;
+    }
 
-	CardSuits getSuit() const { return m_cardDetails.first; }
+    // Getters & Setters
+    CardSuits getSuit() const { return m_cardDetails.first; }
+    CardRank getRank() const { return m_cardDetails.second; }
 
-	CardRank getRank() const { return m_cardDetails.second; }
+    std::pair<int, int> GetCardAsIntPair() const;
 
-	// std::pair<suit, rank>
-	std::pair<int, int> GetCardAsIntPair() const;
+    std::string GetNameFromRank() const;
+    std::string GetNameFromSuit() const;
 
-	std::string GetNameFromRank() const;
+    void SetFlags(const CardFlags flags) { m_flags = flags; }
+    CardFlags GetFlags() const { return m_flags; }
 
-	std::string GetNameFromSuit() const;
+    int GetNumericalValueFromRank() const;
+    int GetNumericalValueFromSuit() const;
+    int GetCardRankValue() const;
 
-	bool IsCardRoyal() const;
-
-	// Flags
-	void SetFlags(const CardFlags flags) { m_flags = flags; }
-
-	CardFlags GetFlags() const { return m_flags; }
-
-	// For magic
-	int GetNumericalValueFromRank() const;
-
-	int GetNumericalValueFromSuit() const;
-
-	// For high card ranking
-	int GetCardRankValue() const;
-
-	// Debugging & Test methods
-	void PrintCardDetails() const;
+    // Helper methods
+    bool IsCardRoyal() const;
+    void PrintCardDetails() const;
 
 private:
-	std::pair<CardSuits, CardRank> m_cardDetails;
+    std::pair<CardSuits, CardRank> m_cardDetails;
 
-	CardFlags m_flags;
+    CardFlags m_flags;
 };

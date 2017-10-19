@@ -23,6 +23,6 @@ public:
 	Game();
 	~Game();
 
-	static void InitializeGame();
+	static void StartGame();
 	static void GameLoop();
 };

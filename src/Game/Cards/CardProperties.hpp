@@ -43,3 +43,12 @@ enum class CardRank : std::uint8_t
 
 	MaxRank
 };
+
+enum CardPos
+{
+    CardOne = 0,
+    CardTwo,
+    CardThree,
+    CardFour,
+    CardFive
+};

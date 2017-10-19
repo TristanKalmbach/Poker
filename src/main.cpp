@@ -1,10 +1,15 @@
-#include "Game/Utility/HandRankings.hpp";
+#include "Game/Utility/HandRankings.hpp"
 #include "Game/Utility/Probabilities.hpp"
+#include "Tests.hpp"
 
 
 int main()
 {
-	Testing::Probabilities::GetProbabilitiesOfHandConditions(HandRanks::FullHouse, 1);
+    std::unique_ptr<Deck> deck = std::make_unique<Deck>();
+    auto hand = deck->CreateHand();
+    const auto card = Card({ CardSuits::Spade, CardRank::Ace });
+
+    Testing::Mechanics::Tests::TestCardReplacement(CardOne, card, hand);
 
 	system("pause");
 }
