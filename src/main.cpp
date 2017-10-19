@@ -5,11 +5,7 @@
 
 int main()
 {
-    std::unique_ptr<Deck> deck = std::make_unique<Deck>();
-    auto hand = deck->CreateHand();
-    const auto card = Card({ CardSuits::Spade, CardRank::Ace });
-
-    Testing::Mechanics::Tests::TestCardReplacement(CardOne, card, hand);
+    Testing::Mechanics::Tests::RunTest(Testing::Mechanics::MechanicTests::TestReplaceAllCards);
 
 	system("pause");
 }
